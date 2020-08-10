@@ -25,7 +25,7 @@ Após o usuario realizar o login, deve ser exibida uma tela de listagem de produ
 
 A API de produtos é essa:
 
-https://us-central1-estudo-974fe.cloudfunctions.net/he
+https://us-central1-estudo-974fe.cloudfunctions.net/front_end
 
 ### O que iremos avaliar?
 
