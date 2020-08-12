@@ -7,7 +7,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "commit": "git-cz"
   },
   "private": true,
   "dependencies": {
@@ -30,6 +31,11 @@
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.1000.5",
     "@angular/cli": "~10.0.5",
@@ -40,7 +46,10 @@
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "^12.11.1",
     "codelyzer": "^6.0.0",
+    "commitizen": "4.1.2",
+    "cz-conventional-changelog": "3.2.0",
     "husky": "^4.2.5",
+    "init": "0.1.2",
     "jasmine-core": "~3.5.0",
     "jasmine-spec-reporter": "~5.0.0",
     "karma": "~5.0.0",
