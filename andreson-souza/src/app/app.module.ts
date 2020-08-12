@@ -4,9 +4,11 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { CardModule } from 'primeng/card';
-import { ButtonModule } from 'primeng/button';
+
+
 import { AuthModule } from './auth/auth.module';
+import { PrimengModule } from './primeng.module';
+
 
 @NgModule({
   declarations: [
@@ -15,9 +17,8 @@ import { AuthModule } from './auth/auth.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CardModule,
-    ButtonModule,
-    AuthModule
+    AuthModule,
+    PrimengModule
   ],
   providers: [],
   bootstrap: [AppComponent]
