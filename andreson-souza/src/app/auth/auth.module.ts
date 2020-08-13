@@ -9,9 +9,10 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AuthRoutingModule } from './auth-routing.module';
 import { LoginComponent } from './login/login.component';
 import { PrimengModule } from '../primeng.module';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
-  declarations: [LoginComponent],
+  declarations: [LoginComponent, RegisterComponent],
   imports: [
     CommonModule,
     BrowserAnimationsModule,
