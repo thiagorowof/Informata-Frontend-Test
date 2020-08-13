@@ -2,14 +2,16 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ProductsComponent } from './pages/products/products.component';
 import { RegisterProductsComponent } from './pages/register-products/register-products.component';
+import { HomeComponent } from './layout/home/home.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: ProductsComponent,
+    component: HomeComponent,
     children: [
-      { path: 'new-product', component: RegisterProductsComponent },
-    ]
+      { path: '', component: ProductsComponent },
+      { path: 'new-product', component: RegisterProductsComponent }
+    ],
   },
 ];
 
