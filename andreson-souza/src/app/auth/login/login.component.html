@@ -5,35 +5,36 @@
       <p-header class="login-title">
         Login
       </p-header>
+
       <div class="p-fluid">
-
-        <div class="p-field">
-          <label for="firstname1">Usuário</label>
-          <span class="p-input-icon-right">
-            <i class="pi pi-user"></i>
-            <input id="usuario" type="text" pInputText>
-          </span>
-        </div>
-
-        <div class="p-field">
-          <label for="lastname1">Senha</label>
-          <span class="p-input-icon-right">
-            <i class="pi pi-lock"></i>
-            <input id="senha" type="text" pInputText>
-          </span>
-        </div>
-
-        <div class="p-formgroup-inline">
-          <div class="p-field-checkbox">
-            <button pButton type="button" label="Entrar"></button>
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+          <div class="p-field form-group">
+            <label for="firstname1">Usuário</label>
+            <span class="p-input-icon-right">
+              <i class="pi pi-user"></i>
+              <input id="usuario" formControlName="username" type="text" pInputText>
+            </span>
           </div>
 
-          <div class="p-field-checkbox">
-            <button pButton type="button" label="Cadastre-se" class="p-button-link"
-              routerLink="/auth/register"></button>
+          <div class="p-field form-group">
+            <label for="lastname1">Senha</label>
+            <span class="p-input-icon-right">
+              <i class="pi pi-lock"></i>
+              <input id="senha" formControlName="password" type="password" pInputText>
+            </span>
           </div>
-        </div>
 
+          <div class="p-formgroup-inline form-group">
+            <div class="p-field-checkbox">
+              <button pButton type="button" label="Entrar"></button>
+            </div>
+
+            <div class="p-field-checkbox form-group">
+              <button pButton type="button" label="Cadastre-se" class="p-button-link"
+                routerLink="/auth/register"></button>
+            </div>
+          </div>
+        </form>
       </div>
     </p-panel>
   </div>
