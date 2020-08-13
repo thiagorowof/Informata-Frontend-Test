@@ -55,8 +55,4 @@ export class ProductsComponent implements OnInit {
       dt.filter(event.value, 'year', 'gt');
     }, 150);
   }
-
-  addNewProduct() {
-    this.router.navigate(['/new-product']);
-  }
 }
