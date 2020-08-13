@@ -1,10 +1,31 @@
-<div class="p-fluid">
-  <div class="p-field">
-      <label for="firstname1">Usuário</label>
-      <input id="firstname1" type="text" pInputText>
-  </div>
-  <div class="p-field">
-      <label for="lastname1">Senha</label>
-      <input id="lastname1" type="text" pInputText>
-  </div>
+<div class="panel-container">
+  <p-panel>
+    <p-header class="login-title">
+      Login
+    </p-header>
+    <div class="p-fluid">
+
+      <div class="p-field">
+        <label for="firstname1">Usuário</label>
+        <input id="firstname1" type="text" pInputText>
+      </div>
+
+      <div class="p-field">
+        <label for="lastname1">Senha</label>
+        <input id="lastname1" type="text" pInputText>
+      </div>
+
+      <div class="p-formgroup-inline">
+        <div class="p-field-checkbox">
+          <button pButton type="button" label="Entrar"></button>
+        </div>
+
+        <div class="p-field-checkbox">
+          <button pButton type="button" label="Cadastre-se" class="p-button-link"></button>
+        </div>
+      </div>
+
+
+    </div>
+  </p-panel>
 </div>
