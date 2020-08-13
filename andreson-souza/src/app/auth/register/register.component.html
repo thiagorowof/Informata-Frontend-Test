@@ -1,1 +1,43 @@
-<p>register works!</p>
+<div class="container">
+
+  <div class="panel-container">
+    <p-panel>
+      <p-header class="register-title">
+        Registro
+      </p-header>
+      <div class="p-fluid">
+
+        <div class="p-field">
+          <label for="firstname">Nome</label>
+          <input id="usuario" type="text" pInputText>
+        </div>
+
+        <div class="p-field">
+          <label for="lastname">Sobrenome</label>
+          <input id="senha" type="text" pInputText>
+        </div>
+
+        <div class="p-field">
+          <label for="firstname1">Nome de usuário</label>
+          <input id="usuario" type="text" pInputText>
+        </div>
+
+        <div class="p-field">
+          <label for="lastname1">Senha</label>
+          <input id="senha" type="text" pInputText>
+        </div>
+
+        <div class="p-formgroup-inline">
+          <div class="p-field-checkbox">
+            <button pButton type="button" label="Cadastrar"></button>
+          </div>
+
+          <div class="p-field-checkbox">
+            <button pButton type="button" label="Cancelar" class="p-button-link" routerLink="/auth/login"></button>
+          </div>
+        </div>
+
+      </div>
+    </p-panel>
+  </div>
+</div>

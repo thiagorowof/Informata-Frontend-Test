@@ -9,12 +9,18 @@
 
         <div class="p-field">
           <label for="firstname1">Usuário</label>
-          <input id="usuario" type="text" pInputText>
+          <span class="p-input-icon-right">
+            <i class="pi pi-user"></i>
+            <input id="usuario" type="text" pInputText>
+          </span>
         </div>
 
         <div class="p-field">
           <label for="lastname1">Senha</label>
-          <input id="senha" type="text" pInputText>
+          <span class="p-input-icon-right">
+            <i class="pi pi-lock"></i>
+            <input id="senha" type="text" pInputText>
+          </span>
         </div>
 
         <div class="p-formgroup-inline">
@@ -23,7 +29,8 @@
           </div>
 
           <div class="p-field-checkbox">
-            <button pButton type="button" label="Cadastre-se" class="p-button-link" routerLink="/auth/register"></button>
+            <button pButton type="button" label="Cadastre-se" class="p-button-link"
+              routerLink="/auth/register"></button>
           </div>
         </div>
 
