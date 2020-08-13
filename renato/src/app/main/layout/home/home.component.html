@@ -1,1 +1,23 @@
-<p>home works!</p>
+<p-toolbar styleClass="toolbar">
+  <div class="p-toolbar-group-left">
+    <img
+      src="../../../../assets/logo-full.png"
+      alt="Logo Informata"
+      class="logo"
+    />
+  </div>
+  <div class="p-toolbar-group-right">
+    <button
+      styleClass="customButton"
+      pButton
+      pRipple
+      type="button"
+      label="Sair"
+      class="p-button-text"
+      (click)="logout()"
+    ></button>
+  </div>
+</p-toolbar>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
