@@ -7,15 +7,21 @@ import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 import { RegisterProductsComponent } from './pages/register-products/register-products.component';
 import { HomeComponent } from './layout/home/home.component';
+import { ToolbarModule } from 'primeng/toolbar';
 
 @NgModule({
-  declarations: [ProductsComponent, RegisterProductsComponent, HomeComponent],
+  declarations: [
+    ProductsComponent,
+    RegisterProductsComponent,
+    HomeComponent,
+  ],
   imports: [
     CommonModule,
     MainRoutingModule,
     TableModule,
     InputTextModule,
     ButtonModule,
+    ToolbarModule,
   ],
 })
 export class MainModule {}
