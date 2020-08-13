@@ -1,0 +1,39 @@
+<div class="login">
+  <p-card styleClass="cardLogin" header="Login">
+    <form [formGroup]="loginForm">
+      <div class="p-fluid">
+        <div class="p-field">
+          <label for="cpf">CPF</label>
+          <p-inputMask
+            formControlName="cpf"
+            mask="999.999.999-99"
+            placeholder="Digite seu CPF"
+            unmask="true"
+          ></p-inputMask>
+        </div>
+        <div class="p-field">
+          <label for="password">Senha</label>
+          <input
+            formControlName="password"
+            id="cpf"
+            type="password"
+            pPassword
+            placeholder="Digite sua senha"
+            promptLabel=""
+            weakLabel="Fraca"
+            mediumLabel="Media"
+            strongLabel="Forte"
+          />
+        </div>
+        <button
+          [disabled]="!loginForm.valid"
+          class="button"
+          pButton
+          type="button"
+          label="Login"
+          (click)="login()"
+        ></button>
+      </div>
+    </form>
+  </p-card>
+</div>

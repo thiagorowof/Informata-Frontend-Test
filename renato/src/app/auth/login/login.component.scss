@@ -1,0 +1,21 @@
+.login {
+  display: flex;
+  justify-content: center;
+}
+
+:host ::ng-deep .cardLogin.p-card {
+  margin-top: 50%;
+  height: 311px;
+}
+
+.button {
+  float: right;
+}
+
+@media (min-width: 1100px) {
+  :host ::ng-deep .cardLogin.p-card {
+    margin-top: 50%;
+    width: 380px;
+    height: 311px;
+  }
+}
