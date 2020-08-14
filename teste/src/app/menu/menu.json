@@ -1,0 +1,163 @@
+{
+    "data":[{
+	"id": 19,
+	"codigoErp": "190",
+	"apresentacao": "J&J 24UN",
+	"nomeComercial": "ABS PARA SEIOS",
+	"nomeComercialComApresentacao": "ABS PARA SEIOS J&J 24UN",
+	"unidadeMedidaAnvisa": "FRASCOS",
+	"codigoBarrasPrincipal": "7894567890135"
+}, {
+	"id": 27,
+	"codigoErp": "4112017",
+	"apresentacao": "75MG10CAPMED",
+	"nomeComercial": "TAMIFLU",
+	"nomeComercialComApresentacao": "TAMIFLU 75MG10CAPMED",
+	"unidadeMedidaAnvisa": "CAIXAS",
+	"codigoBarrasPrincipal": "7891260023136"
+}, {
+	"id": 906,
+	"codigoErp": "9060",
+	"apresentacao": "2MG 80COMP BAS",
+	"nomeComercial": "G BIPERIDENO",
+	"nomeComercialComApresentacao": "G BIPERIDENO 2MG 80COMP BAS",
+	"unidadeMedidaAnvisa": "CAIXAS",
+	"codigoBarrasPrincipal": "7896255700511"
+}, {
+	"id": 965,
+	"codigoErp": "9650",
+	"apresentacao": "250MG 25CAP",
+	"nomeComercial": "DEPAKENE",
+	"nomeComercialComApresentacao": "DEPAKENE 250MG 25CAP",
+	"unidadeMedidaAnvisa": "CAIXAS",
+	"codigoBarrasPrincipal": "7891158000942"
+}, {
+	"id": 973,
+	"codigoErp": "9730",
+	"apresentacao": "300MG 25COMP",
+	"nomeComercial": "DEPAKENE",
+	"nomeComercialComApresentacao": "DEPAKENE 300MG 25COMP",
+	"unidadeMedidaAnvisa": "CAIXAS",
+	"codigoBarrasPrincipal": "7891158000317"
+}, {
+	"id": 981,
+	"codigoErp": "9810",
+	"apresentacao": "500MG 50COMP",
+	"nomeComercial": "DEPAKENE",
+	"nomeComercialComApresentacao": "DEPAKENE 500MG 50COMP",
+	"unidadeMedidaAnvisa": "CAIXAS",
+	"codigoBarrasPrincipal": "7891158000898"
+}, {
+	"id": 990,
+	"codigoErp": "9900",
+	"apresentacao": "XPE 100ML",
+	"nomeComercial": "DEPAKENE",
+	"nomeComercialComApresentacao": "DEPAKENE XPE 100ML",
+	"unidadeMedidaAnvisa": "FRASCOS",
+	"codigoBarrasPrincipal": "7891158000966"
+}, {
+	"id": 1007,
+	"codigoErp": "10070",
+	"apresentacao": "250MG 20COMP",
+	"nomeComercial": "DEPAKOTE",
+	"nomeComercialComApresentacao": "DEPAKOTE 250MG 20COMP",
+	"unidadeMedidaAnvisa": "CAIXAS",
+	"codigoBarrasPrincipal": "7891158028229"
+}, {
+	"id": 1015,
+	"codigoErp": "10150",
+	"apresentacao": "500MG 20COMP",
+	"nomeComercial": "DEPAKOTE",
+	"nomeComercialComApresentacao": "DEPAKOTE 500MG 20COMP",
+	"unidadeMedidaAnvisa": "CAIXAS",
+	"codigoBarrasPrincipal": "7891158028236"
+}, {
+	"id": 1023,
+	"codigoErp": "10230",
+	"apresentacao": "SPRINKLE 30CAP",
+	"nomeComercial": "DEPAKOTE",
+	"nomeComercialComApresentacao": "DEPAKOTE SPRINKLE 30CAP",
+	"unidadeMedidaAnvisa": "CAIXAS",
+	"codigoBarrasPrincipal": "7896255762649"
+}, {
+	"id": 1449,
+	"codigoErp": "14490",
+	"apresentacao": "5MG 30COMP",
+	"nomeComercial": "NIAR",
+	"nomeComercialComApresentacao": "NIAR 5MG 30COMP",
+	"unidadeMedidaAnvisa": "CAIXAS",
+	"codigoBarrasPrincipal": "7896255715003"
+}, {
+	"id": 1465,
+	"codigoErp": "14650",
+	"apresentacao": "20COMP",
+	"nomeComercial": "NOCTAL",
+	"nomeComercialComApresentacao": "NOCTAL 20COMP",
+	"unidadeMedidaAnvisa": "CAIXAS",
+	"codigoBarrasPrincipal": "7891158000195"
+}, {
+	"id": 1686,
+	"codigoErp": "16860",
+	"apresentacao": "10MG 30CAP",
+	"nomeComercial": "REDUCTIL",
+	"nomeComercialComApresentacao": "REDUCTIL 10MG 30CAP",
+	"unidadeMedidaAnvisa": "CAIXAS",
+	"codigoBarrasPrincipal": "7896255716819"
+}, {
+	"id": 1708,
+	"codigoErp": "17080",
+	"apresentacao": "15MG 30CAP",
+	"nomeComercial": "REDUCTIL",
+	"nomeComercialComApresentacao": "REDUCTIL 15MG 30CAP",
+	"unidadeMedidaAnvisa": "CAIXAS",
+	"codigoBarrasPrincipal": "7896255702744"
+}, {
+	"id": 2828,
+	"codigoErp": "28280",
+	"apresentacao": "20CAP \"IN\"",
+	"nomeComercial": "DESOBESI M",
+	"nomeComercialComApresentacao": "DESOBESI M 20CAP \"IN\"",
+	"unidadeMedidaAnvisa": "CAIXAS",
+	"codigoBarrasPrincipal": "7896202900759"
+}, {
+	"id": 2933,
+	"codigoErp": "29330",
+	"apresentacao": "75MG 20CAP",
+	"nomeComercial": "DUALID S",
+	"nomeComercialComApresentacao": "DUALID S 75MG 20CAP",
+	"unidadeMedidaAnvisa": "CAIXAS",
+	"codigoBarrasPrincipal": "7896658005275"
+}, {
+	"id": 3492,
+	"codigoErp": "34920",
+	"apresentacao": "20DRG",
+	"nomeComercial": "PARNATE",
+	"nomeComercialComApresentacao": "PARNATE 20DRG",
+	"unidadeMedidaAnvisa": "CAIXAS",
+	"codigoBarrasPrincipal": "7896015521912"
+}, {
+	"id": 4197,
+	"codigoErp": "41970",
+	"apresentacao": "3MG 20COMP",
+	"nomeComercial": "SOMALIUM",
+	"nomeComercialComApresentacao": "SOMALIUM 3MG 20COMP",
+	"unidadeMedidaAnvisa": "CAIXAS",
+	"codigoBarrasPrincipal": "7896658000607"
+}, {
+	"id": 4200,
+	"codigoErp": "42000",
+	"apresentacao": "6MG 20COMP",
+	"nomeComercial": "SOMALIUM",
+	"nomeComercialComApresentacao": "SOMALIUM 6MG 20COMP",
+	"unidadeMedidaAnvisa": "CAIXAS",
+	"codigoBarrasPrincipal": "7896658000614"
+}, {
+	"id": 4219,
+	"codigoErp": "42190",
+	"apresentacao": "GTS 20ML",
+	"nomeComercial": "SOMALIUM",
+	"nomeComercialComApresentacao": "SOMALIUM GTS 20ML",
+	"unidadeMedidaAnvisa": "FRASCOS",
+	"codigoBarrasPrincipal": "7896658004841"
+}]
+}

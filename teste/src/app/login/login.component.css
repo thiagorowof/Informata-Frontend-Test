@@ -1,0 +1,26 @@
+.center-div {
+    width: 30%;
+    margin: 0 auto;
+  }
+  
+.login-panel{
+    margin-top: 170px;
+}
+
+.Login{
+    margin: 5px;
+    width: 30%;
+  margin: 0 auto;
+}
+
+i {
+    margin: 10px;
+}
+
+button {
+    margin: 20px 1px 1px 1px;
+}
+
+.card-body{
+  margin: 17px;
+}

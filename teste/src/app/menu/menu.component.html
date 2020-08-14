@@ -1,0 +1,26 @@
+
+<p-table [value]="dados" [columns]="cols" [paginator]="true" [rows]="10" 
+[rowsPerPageOptions]="[5,10,15,20]" totalRecords="totalRecords" pageLinks="3" >
+    <ng-template pTemplate="header">
+        <tr>
+            <td>Id</td>
+            <td>Cód. Erp</td>
+            <td>Apresentação</td>
+            <td>Nome Comercial</td>
+            <td>unidadeMedidaAnvisa</td>
+            <td>Cód. Barras Principal</td>
+            <td>Nome Comercial ComApresentação</td>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-dado>
+        <tr>
+            <td>{{ dado.id }}</td>
+            <td>{{ dado.codigoErp }}</td>
+            <td>{{ dado.apresentacao }}</td>
+            <td>{{ dado.nomeComercial }}</td>
+            <td>{{ dado.unidadeMedidaAnvisa }}</td>
+            <td>{{ dado.codigoBarrasPrincipal }}</td>
+            <td>{{ dado.nomeComercialComApresentacao }}</td>
+        </tr>
+    </ng-template>
+</p-table>
