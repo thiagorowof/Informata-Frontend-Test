@@ -3,8 +3,8 @@ import { Injectable } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 import { filter } from 'rxjs/operators';
 
-import { Alert } from './alert';
-import { AlertType } from './alert';
+import { Alert } from '../models/alert';
+import { AlertType } from '../models/alert';
 
 @Injectable({
   providedIn: 'root'

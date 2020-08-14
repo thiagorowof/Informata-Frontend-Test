@@ -5,7 +5,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { first } from 'rxjs/operators';
 
 import { AuthService } from '../auth.service';
-import { AlertService } from './../alert.service';
+import { AlertService } from '../../shared/services/alert.service';
 
 @Component({
   selector: 'app-login',
