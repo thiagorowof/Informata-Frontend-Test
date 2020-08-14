@@ -1,5 +1,5 @@
 :host ::ng-deep .toolbar.p-toolbar {
-  background: #2C3E50;
+  background: #2c3e50;
   height: 71px;
   margin-bottom: 20px;
 }
@@ -10,6 +10,17 @@
 
 :host ::ng-deep .customButton.p-button {
   text-decoration: none;
+}
+
+.actual-user {
+  color: rgb(204, 203, 203);
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.actual-user:hover {
+  color: #0D89EC;
+  transition: 0.3s;
 }
 
 .container {

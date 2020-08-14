@@ -8,13 +8,10 @@ import { ButtonModule } from 'primeng/button';
 import { RegisterProductsComponent } from './pages/register-products/register-products.component';
 import { HomeComponent } from './layout/home/home.component';
 import { ToolbarModule } from 'primeng/toolbar';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [
-    ProductsComponent,
-    RegisterProductsComponent,
-    HomeComponent,
-  ],
+  declarations: [ProductsComponent, RegisterProductsComponent, HomeComponent],
   imports: [
     CommonModule,
     MainRoutingModule,
@@ -22,6 +19,7 @@ import { ToolbarModule } from 'primeng/toolbar';
     InputTextModule,
     ButtonModule,
     ToolbarModule,
+    ReactiveFormsModule,
   ],
 })
 export class MainModule {}
