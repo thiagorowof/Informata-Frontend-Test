@@ -1,1 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+  ;
+
+}
+
+.container {
+  width: 100%;
+  height: 50vh;
+  background-color: #34495E;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.card {
+  margin-top: 8em !important;
+}
+
+.btn-primary-color {
+  background-color: #34495E;
+  border: none;
+  transition: background 0.4s;
+}
+
+.btn-secondary-color {
+  border: 1px solid #34495E !important;
+  color: #34495E !important;
+  transition: background 0.4s;
+}
