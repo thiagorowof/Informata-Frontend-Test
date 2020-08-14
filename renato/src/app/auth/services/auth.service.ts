@@ -1,12 +1,11 @@
 import { Injectable } from '@angular/core';
 import { Observable, of, BehaviorSubject, Subject } from 'rxjs';
 import { tap, map } from 'rxjs/operators';
-import { CredentialsLoginModel } from '../shared/models/credentials-login.model';
-import { ResponseAuthModel } from '../shared/models/response-auth.model';
+import { CredentialsLoginModel } from '../../shared/models/credentials-login.model';
+import { ResponseAuthModel } from '../../shared/models/response-auth.model';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
-
-const STORAGE_KEY = 'currentUser';
+import { KEY_CURRENT_USER } from '../../shared/keys-local-storage';
 
 @Injectable({
   providedIn: 'root',
@@ -16,7 +15,7 @@ export class AuthService {
   private logoutSubject: Subject<any>;
 
   constructor(private http: HttpClient, private router: Router) {
-    const savedUser = JSON.parse(localStorage.getItem(STORAGE_KEY));
+    const savedUser = JSON.parse(localStorage.getItem(KEY_CURRENT_USER));
     this.currentUserSubject = new BehaviorSubject<ResponseAuthModel>(savedUser);
     this.logoutSubject = new Subject<any>();
   }
@@ -33,21 +32,21 @@ export class AuthService {
           email: 'renato@renato.com',
         },
       }).pipe(tap((user: ResponseAuthModel) => {
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(user));
+        localStorage.setItem(KEY_CURRENT_USER, JSON.stringify(user));
         this.currentUserSubject.next(user);
       }));
     }
   }
 
   logout(): void {
-    localStorage.removeItem(STORAGE_KEY);
+    localStorage.removeItem(KEY_CURRENT_USER);
     this.currentUserSubject.next(null);
     this.logoutSubject.next(null);
     this.router.navigate(['/']);
   }
 
   get token(): string {
-    const savedUser = JSON.parse(localStorage.getItem(STORAGE_KEY));
+    const savedUser = JSON.parse(localStorage.getItem(KEY_CURRENT_USER));
     if (!savedUser) {
       return null;
     }

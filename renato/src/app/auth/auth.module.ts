@@ -9,6 +9,7 @@ import { InputTextModule } from 'primeng/inputtext';
 import { InputMaskModule } from 'primeng/inputmask';
 import { ReactiveFormsModule } from '@angular/forms';
 import { PasswordModule } from 'primeng/password';
+import { SplitButtonModule } from 'primeng/splitbutton';
 
 @NgModule({
   declarations: [LoginComponent],
@@ -16,6 +17,7 @@ import { PasswordModule } from 'primeng/password';
     CommonModule,
     CardModule,
     ButtonModule,
+    SplitButtonModule,
     InputTextModule,
     InputMaskModule,
     ReactiveFormsModule,
