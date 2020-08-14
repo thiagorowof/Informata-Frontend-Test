@@ -9,7 +9,6 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import { AuthModule } from './auth/auth.module';
 import { PrimengModule } from './primeng.module';
-import { MainModule } from './main/main.module';
 
 
 @NgModule({
@@ -23,7 +22,6 @@ import { MainModule } from './main/main.module';
     HttpClientModule,
     AuthModule,
     PrimengModule,
-    MainModule
   ],
   providers: [],
   bootstrap: [AppComponent]
