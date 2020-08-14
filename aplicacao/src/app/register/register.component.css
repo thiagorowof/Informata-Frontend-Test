@@ -1,1 +1,56 @@
+.menu-nav {
+  margin: 0 auto;
+  padding-top: 2%;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
+.menu-nav-items {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.menu-nav-items li {
+  padding: 1em;
+  color: #707070;
+  border-left: 2px solid #2C3E50;
+}
+
+.menu-nav-items li+li {
+  border-right: 2px solid #2C3E50;
+}
+
+.btn-primary-color:hover {
+  background-color: #22374D;
+}
+
+.btn-secondary-color:hover {
+  background-color: #f2f2f2 !important;
+}
+
+span {
+  margin-top: 0.5em;
+}
+
+
+
+/*RESPONSIVIDADE*/
+
+@media (max-width: 700px) {
+  .menu-nav-items {
+    display: none;
+  }
+
+  .menu-nav {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menu-nav img {
+    width: 50%;
+    margin-top: 2em;
+  }
+}
