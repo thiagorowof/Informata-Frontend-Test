@@ -1,0 +1,14 @@
+<h2 class="text-center">Entrar</h2>
+
+<form (ngSubmit)="onSubmit()" #form="ngForm">
+  <div>
+    <label>E-mail</label>
+    <input type="email" name="email" id="email" [(ngModel)]="login.email" required />
+  </div>
+  <div>
+    <label>Senha</label>
+    <input type="password" name="password" id="password" [(ngModel)]="login.password" required />
+  </div>
+  <button type="submit" [disabled]="form.form.invalid">Entrar</button>
+  <button type="button" [routerLink]="['/create-account']">Criar conta</button>
+</form>

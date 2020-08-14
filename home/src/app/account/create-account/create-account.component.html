@@ -1,0 +1,17 @@
+<h2>Criar minha conta</h2>
+
+<form (ngSubmit)="onSubmit()" #form="ngForm">
+  <div>
+    <label>Nome</label>
+    <input type="text" name="email" id="email" [(ngModel)]="account.name" required />
+  </div>
+  <div>
+    <label>E-mail</label>
+    <input type="email" name="email" id="email" [(ngModel)]="account.email" required />
+  </div>
+  <div>
+    <label>Senha</label>
+    <input type="password" name="password" id="password" [(ngModel)]="account.password" required />
+  </div>
+  <button type="submit" [routerLink]="['/login']" [disabled]="form.form.invalid">Criar minha conta</button>
+</form>

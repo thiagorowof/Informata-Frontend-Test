@@ -1,5 +1,5 @@
 <p-menubar [model]="items">
-  <button pButton label="Logout" class="p-button-danger" icon="pi pi-fw pi-power-off"></button>
+  <button pButton label="Logout" class="p-button-danger" icon="pi pi-fw pi-power-off" onclick="localStorage.removeItem('token');window.location.reload();"></button>
 </p-menubar>
 
 <div class="card" style="margin: 2em;">
