@@ -5,10 +5,10 @@
         Login
       </p-header>
 
-      <div class="p-fluid">
+      <div class="p-fluid p-formgrid">
         <form [formGroup]="form" (ngSubmit)="onSubmit()">
 
-          <div class="p-field form-group">
+          <div class="p-field">
             <label for="username">Username</label>
             <span class="p-input-icon-right">
               <i class="pi pi-user"></i>
@@ -24,8 +24,8 @@
             </span>
           </div>
 
-          <div class="p-formgroup-inline">
-            <div>
+          <div class="p-fluid p-formgrid p-grid">
+            <div class="p-field p-col-12 p-md-3">
               <button pButton pRipple label="Logar" class="p-button-raised"></button>
             </div>
             <p-button label="Cadastrar-se" styleClass="p-button-link" routerLink="../register"></p-button>
