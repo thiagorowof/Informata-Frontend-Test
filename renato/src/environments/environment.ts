@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  URL_API: 'https://us-central1-estudo-974fe.cloudfunctions.net/front_end'
+  API_URL: 'https://us-central1-estudo-974fe.cloudfunctions.net/front_end'
 };
 
 /*

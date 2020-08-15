@@ -1,5 +1,5 @@
 export interface ProductModel {
-  id: number;
+  id?: number;
   codigoErp: string;
   apresentacao: string;
   nomeComercial: string;
