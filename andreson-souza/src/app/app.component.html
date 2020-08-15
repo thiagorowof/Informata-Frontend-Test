@@ -1,9 +1,11 @@
 <p-toolbar *ngIf="user" styleClass="toolbar">
-  <div class="p-toolbar-group-left">
+  <div class="p-toolbar-group-left" style="color: #ffffff;">
+    <img src="assets/linux.png" style="width: 35px; margin-right: 15px;" alt="logo">
+    Lorem Ipsum
   </div>
 
   <div class="p-toolbar-group-right">
-    <span class="user-name">{{user.firstName}}</span>
+    <span class="user-name" style="margin-right: 15px;">{{user.firstName}}</span>
     <p-button label="Sair" (click)="logout()" styleClass="p-button-success"></p-button>
   </div>
 </p-toolbar>

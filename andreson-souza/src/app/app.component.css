@@ -1,0 +1,9 @@
+:host ::ng-deep .toolbar.p-toolbar {
+  background: #2980b9;
+  height: 71px;
+  margin-bottom: 20px;
+}
+
+.user-name {
+  color: #ffffff;
+}
