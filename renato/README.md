@@ -1,27 +1,39 @@
-# Renato
+# Renato, Test FrontEnd - Informata / PE
+----------
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.5.
+## Pré-requisitos
 
-## Development server
+- **[Angular 10.0.5+](https://cli.angular.io/)**
+- **[Node 12.18.3+](https://nodejs.org/en/download/)**
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Iniciando a aplicação
+- Com todos os pré-requisitos instalados navegue até o diretório do projeto e execute
 
-## Code scaffolding
+```bash
+npm install
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- em seguida execute
 
-## Build
+```bash
+ng serve
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+- Com o projeto servindo abra no navegador a url
 
-## Running unit tests
+```bash
+http://localhost:4200
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Login na aplicação
+- Para acessar a aplicação use
+```json
+{
+  "cpf": "11111111111",
+  "senha": "123456"
+}
+```
 
-## Running end-to-end tests
+>**NOTA**: Esta aplicação não está conectada a uma API de usuários por isso os dados acima levam a um usuário padrão
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+>Está aplicação não está persistindo dados em um banco apenas armazena no localStorage do navegador
