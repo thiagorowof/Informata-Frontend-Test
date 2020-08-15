@@ -1,15 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+
+import { User } from '../shared/models/user';
+import { AuthService } from '../shared/services/auth.service';
 
 @Component({
-  selector: 'app-products',
-  templateUrl: './products.component.html',
-  styleUrls: ['./products.component.css']
-})
-export class ProductsComponent implements OnInit {
+  templateUrl: 'products.component.html' })
+export class ProductsComponent {
+  user: User;
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor(private authService: AuthService) {
+    this.user = this.authService.userValue;
   }
-
 }
