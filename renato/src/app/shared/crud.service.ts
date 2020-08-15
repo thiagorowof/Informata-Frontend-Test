@@ -15,6 +15,8 @@ export class CrudService<T> {
   }
 
   private save(record: T): Observable<T> {
+    console.log(record);
+
     return this.http.post<T>(this.URL_API, record).pipe(take(1));
   }
 

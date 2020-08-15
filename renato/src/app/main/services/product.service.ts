@@ -15,12 +15,13 @@ export class ProductService extends CrudService<ProductModel> {
     super(http, API_URL);
   }
 
-  mockSave(product: ProductModel): Observable<ProductModel> {
-    return this.http
-      .post<ProductModel>(
-        '../../shared/mocks/api.ts',
-        API_POST_LOCAL_STORAGE(product)
-      )
-      .pipe(take(1));
-  }
+  /** Opção para salvar os dados no Local Storage do navegador */
+  // mockSave(product: ProductModel): Observable<ProductModel> {
+  //   return this.http
+  //     .post<ProductModel>(
+  //       '../../shared/mocks/api.ts',
+  //       API_POST_LOCAL_STORAGE(product)
+  //     )
+  //     .pipe(take(1));
+  // }
 }
