@@ -12,7 +12,7 @@ import {AppRoutingModule} from '../app-routing';
 import { LoginComponent } from './login.component';
 import {CardModule} from 'primeng/card';
 import {OrderListModule, OrderList} from 'primeng/orderlist';
-
+import { AuthGuard } from './auth.guard';
 
 @NgModule({
   imports: [
@@ -30,6 +30,7 @@ import {OrderListModule, OrderList} from 'primeng/orderlist';
     OrderList,
     ButtonModule
   ],
+  providers:[AuthGuard],
   declarations: [ LoginComponent, LoginComponent ],
   bootstrap:    [ LoginComponent ]
 })

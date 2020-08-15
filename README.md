@@ -9,6 +9,10 @@ Start
 
 Release History
     
+    0.2.2
+
+        Adicionado autenticação do usuário com AuthGuard
+    
     0.2.1
 
         Adicionado método logout

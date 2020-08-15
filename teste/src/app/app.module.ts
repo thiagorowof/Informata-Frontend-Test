@@ -23,7 +23,7 @@ import { ButtonModule } from 'primeng/button';
 import { LoginComponent } from './login/login.component';
 import { AuthService } from './login/auth.service';
 
-
+import { AuthGuard } from './login/auth.guard';
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,7 +44,7 @@ import { AuthService } from './login/auth.service';
     CardModule,
     ButtonModule    
   ],
-  providers: [MenuService, LoginComponent, AuthService],
+  providers: [MenuService, LoginComponent, AuthService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

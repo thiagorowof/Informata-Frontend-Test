@@ -7,15 +7,14 @@ import { Observable } from 'rxjs';
 export class AuthGuard implements CanActivate {
 
     constructor(private auth: AuthService, private router: Router){ }
-canActivate(){return true}
-    //canActivate(){
-    //canActivate(
-        //next: ActivatedRouteSnapshot,
-        //state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
-           // if(!this.auth.isLoggedIn){
-              //  this.router.navigate(['/home'])
-           // }
-            //return this.auth.isLoggedIn()
-       // }
-    
+   
+    canActivate(       
+        route: ActivatedRouteSnapshot,
+        state: RouterStateSnapshot): Observable<boolean> | boolean {           
+           if (localStorage['token'] != null) {          
+            return true;
+        } 
+        alert('Você não está logado !');
+         this.router.navigate(['/']); 
+       }    
 }

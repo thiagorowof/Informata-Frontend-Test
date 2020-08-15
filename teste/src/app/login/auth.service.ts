@@ -14,31 +14,16 @@ export class AuthService {
 private usuarioAutenticado: boolean = false
 
 fazerLogin(usuario: Usuario){
-  if(usuario.nome && usuario.senha){
-    this.setLoggedIn(true)    
-  }else{
-    this.setLoggedIn(false)
+  if(usuario.nome === "admin" && usuario.senha === "admin"){    
+    localStorage['token'] === '123@qwe';    
+    this.router.navigate(['home']);   
+  }else{   
     alert('Usuário e/ou senha inválidos')  
   }
 }
 
- get isLoggedIn(){
-  return this.loggedInStatus
-}
-
-setLoggedIn(value: boolean){
-//this.loggedInStatus = value
-      this.loggedInStatus = value
-      localStorage.setItem('loggedIn', 'true') 
-    if(this.loggedInStatus){
-      this.router.navigate(['/home'])
-  }else if(!this.loggedInStatus){
-      this.loggedInStatus  = false
-      this.router.navigate(['/'])
-  }else{
-      this.loggedInStatus  = false
-      this.router.navigate(['/'])
-    }
+  get isLoggedIn(){
+    return this.loggedInStatus
   }
 }
 
