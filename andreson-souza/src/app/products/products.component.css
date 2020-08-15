@@ -1,0 +1,16 @@
+@media screen {
+  .card-table {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    padding-top: 20px !important;
+    margin: 0 auto;
+  }
+}
+
+th {
+  font-size: 14px;
+}
+
+td {
+  font-size: 0.8em;
+}
