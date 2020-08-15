@@ -21,9 +21,9 @@ import {CardModule} from 'primeng/card';
 import { ButtonModule } from 'primeng/button';
 
 import { LoginComponent } from './login/login.component';
-import { AuthService } from './login/auth.service';
+import { AuthService } from './login/auth/auth.service';
 
-import { AuthGuard } from './login/auth.guard';
+import { AuthGuard } from './login/auth/auth.guard';
 import { Error404pageComponent } from './error404page/error404page.component';
 @NgModule({
   declarations: [

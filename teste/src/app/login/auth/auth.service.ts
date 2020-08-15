@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Usuario } from './usuario';
+import { Usuario } from '../usuario';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http'
 
@@ -13,9 +13,10 @@ export class AuthService {
  
 private usuarioAutenticado: boolean = false
 
-fazerLogin(usuario: Usuario){
-  if(usuario.nome === "admin" && usuario.senha === "admin"){    
-    localStorage['token'] === '123@qwe';    
+fazerLogin(usuario: Usuario){  
+
+  if(usuario.nome == "admin" && usuario.senha == "admin"){    
+    localStorage['token'] = '123@qwe';    
     this.router.navigate(['home']);   
   }else{   
     alert('Usuário e/ou senha inválidos')  

@@ -2,10 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { MenuService, Dados } from './menu.service'
 import {MenuItem} from 'primeng/api';
 import { FormGroup, FormControl } from '@angular/forms';
-
 import { FilterUtils } from 'primeng/utils';
-import { AuthService } from '../login/auth.service'
-import { ActivatedRoute, Router } from '@angular/router';
+
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
@@ -23,10 +21,8 @@ export class MenuComponent implements OnInit {
 
   profileForm:  FormGroup
 
-//aqui
 
 codigoErp: number;
-//ate aaqui
 
   constructor(private menuService: MenuService) { }
 
@@ -43,7 +39,6 @@ codigoErp: number;
       { field: 'codigoBarrasPrincipal', header: 'Cód.BarrasPrincipal' },
       { field: 'nomeComercialComApresentacao', header: 'NomeComercialComApresentação' },
     ]
-
 
     this.items = [
       {
@@ -121,11 +116,8 @@ codigoErp: number;
           label: 'Quit', icon: 'pi pi-fw pi-power-off', routerLink: '/',
           command: (event) => this.onLogout()
       }
-  ];
-
+  ]; 
  
-
-  //filtro
   FilterUtils['custom'] = (value, filter): boolean => {
     if (filter === undefined || filter === null || filter.trim() === '') {
         return true;
@@ -138,15 +130,12 @@ codigoErp: number;
     return parseInt(filter) > value;
 }
 
-  //aqui termina o bloco acima
-
-
-  this.profileForm = new FormGroup({
-    firstName: new FormControl(''),
-    lastName: new FormControl(''),
-  });
+    this.profileForm = new FormGroup({
+        firstName: new FormControl(''),
+        lastName: new FormControl(''),
+    });
   }
-//isso aqui é abaixo do ng on init
+
 
 onLogout(){
     return localStorage.clear();
