@@ -6,6 +6,7 @@ import { CardModule } from 'primeng/card';
 import { PanelModule } from 'primeng/panel';
 import { InputTextModule } from 'primeng/inputtext';
 import { PasswordModule } from 'primeng/password';
+import { ToolbarModule } from 'primeng/toolbar';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { PasswordModule } from 'primeng/password';
     CardModule,
     PanelModule,
     InputTextModule,
-    PasswordModule
+    PasswordModule,
+    ToolbarModule
   ],
   declarations: []
 })
