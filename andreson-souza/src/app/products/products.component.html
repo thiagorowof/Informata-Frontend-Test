@@ -1,6 +1,43 @@
-<div>
-  <div class="container">
-      <h1>Olá {{user.firstName}}!</h1>
-      <p>Você está autenticado!!!</p>
-  </div>
-</div>
+<header>
+  <h2>Lista de Produtos</h2>
+</header>
+
+<main role="main">
+  <section>
+    <div>
+      <p-table [value]="products">
+        <ng-template pTemplate="header">
+          <tr>
+            <th style="width: 80px">Id</th>
+            <th>Código Erp</th>
+            <th>Apresentacão</th>
+            <th>Nome Comercial</th>
+            <th>Nome Comercial Com Apresentacao</th>
+            <th>Unidade Medida Anvisa</th>
+            <th>Código Barras Principal</th>
+          </tr>
+        </ng-template>
+
+        <ng-template pTemplate="body" let-product>
+          <tr>
+            <td>{{product.id}}</td>
+            <td>{{product.codigoErp}}</td>
+            <td>{{product.apresentacao}}</td>
+            <td>{{product.nomeComercial}}</td>
+            <td>{{product.nomeComercialComApresentacao}}</td>
+            <td>{{product.unidadeMedidaAnvisa}}</td>
+            <td>{{product.codigoBarrasPrincipal}}</td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </div>
+  </section>
+</main>
+
+<!-- id: number;
+codigoErp: string;
+apresentacao: string;
+nomeComercial: string;
+nomeComercialComApresentacao: string;
+unidadeMedidaAnvisa: string;
+codigoBarrasPrincipal: string; -->
