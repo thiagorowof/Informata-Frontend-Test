@@ -1,21 +1,15 @@
 import { NgModule }      from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
 import { MenuComponent }   from './menu.component';
 import { MenuService } from './menu.service';
-
 import {TableModule} from 'primeng/table';
 import { TabViewModule } from 'primeng/tabview';
 import {PaginatorModule} from 'primeng/paginator';
-
 import { MenubarModule} from 'primeng/menubar';
-
 import { FormGroup, FormControl } from '@angular/forms';
-
 import {OrderListModule, OrderList} from 'primeng/orderlist';
 import {AutoCompleteModule} from 'primeng/autocomplete';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -37,9 +31,7 @@ import { ActivatedRoute, Router } from '@angular/router';
     FormControl,
     AutoCompleteModule,
     ActivatedRoute,
-    Router
-    
-    
+    Router    
   ],
   declarations: [ MenuComponent ],
   bootstrap:    [ MenuComponent ],

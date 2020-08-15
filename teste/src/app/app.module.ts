@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from '../app/app-routing';
+
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 
@@ -15,7 +15,6 @@ import {PaginatorModule} from 'primeng/paginator';
 
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { MenuService } from './menu/menu.service';
-//import {OrderListModule, OrderList} from 'primeng/orderlist';
 import {MenubarModule} from 'primeng/menubar';
 import {AutoCompleteModule} from 'primeng/autocomplete';
 import {CardModule} from 'primeng/card';
@@ -43,9 +42,7 @@ import { AuthService } from './login/auth.service';
     ReactiveFormsModule ,
     AutoCompleteModule,
     CardModule,
-    ButtonModule,
-    
-    
+    ButtonModule    
   ],
   providers: [MenuService, LoginComponent, AuthService],
   bootstrap: [AppComponent]

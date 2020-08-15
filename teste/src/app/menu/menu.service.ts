@@ -20,11 +20,8 @@ export class MenuService {
 
     async getDados() {
         return await this.http.get<any>('https://us-central1-estudo-974fe.cloudfunctions.net/front_end')
-        //return this.http.get<any>('assets/menu.json')
         .toPromise()
-        .then(res => <Dados[]>res)
-        
-        .then(data => { return data; });
-        
+        .then(res => <Dados[]>res)        
+        .then(data => { return data; });        
     }
 }

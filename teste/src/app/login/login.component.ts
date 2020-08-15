@@ -13,16 +13,12 @@ export class LoginComponent implements OnInit {
 
    constructor(public authService: AuthService) { } 
 
-  ngOnInit() {    
+    ngOnInit() {    
+      }
+
+    fazerLogin(){
+      this.authService.fazerLogin(this.usuario)
     }
-
-  fazerLogin(){
-    this.authService.fazerLogin(this.usuario)
-
-  }
-  
-
-
   }
 
 
