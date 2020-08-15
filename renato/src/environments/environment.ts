@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  API_URL: 'https://us-central1-estudo-974fe.cloudfunctions.net/front_end'
+  API_URL: 'http://localhost:3000/front_end'
 };
 
 /*
