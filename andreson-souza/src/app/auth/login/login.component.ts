@@ -1,17 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
-
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { first } from 'rxjs/operators';
 
 import { AuthService } from '../../shared/services/auth.service';
-import { AlertService } from '../../shared/services/alert.service';
 
-@Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
-})
+@Component({ templateUrl: 'login.component.html' })
 export class LoginComponent implements OnInit {
   form: FormGroup;
   loading = false;
@@ -23,10 +17,9 @@ export class LoginComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router,
     private authService: AuthService,
-    private alertService: AlertService
   ) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.form = this.formBuilder.group({
       username: ['', Validators.required],
       password: ['', Validators.required]
@@ -39,7 +32,6 @@ export class LoginComponent implements OnInit {
 
   onSubmit() {
     this.submitted = true;
-    this.alertService.clear();
 
     if (this.form.invalid) {
       return;
@@ -53,10 +45,8 @@ export class LoginComponent implements OnInit {
           this.router.navigate([this.returnUrl]);
         },
         error => {
-          this.alertService.error(error);
+          console.error(error);
           this.loading = false;
         });
-
   }
-
 }
