@@ -16,7 +16,7 @@
       <input type="password" name="password" id="password" [(ngModel)]="account.password" pInputText required />
     </div>
     <div class="p-field">
-      <button type="submit" pButton [routerLink]="['/login']" label="Cadastrar-se" [disabled]="form.form.invalid"></button>
+      <button type="submit" pButton [routerLink]="['/login']" label="Cadastrar-se" onclick="alert('Cadastrado com sucesso!')" [disabled]="form.form.invalid"></button>
     </div>
   </div>
 </form>
