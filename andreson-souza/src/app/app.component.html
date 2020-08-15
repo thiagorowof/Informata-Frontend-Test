@@ -1,9 +1,9 @@
-<p-toolbar *ngIf="user">
+<p-toolbar *ngIf="user" styleClass="toolbar">
   <div class="p-toolbar-group-left">
   </div>
 
   <div class="p-toolbar-group-right">
-    <span>{{user.firstName}}</span>
+    <span class="user-name">{{user.firstName}}</span>
     <p-button label="Sair" (click)="logout()" styleClass="p-button-success"></p-button>
   </div>
 </p-toolbar>
