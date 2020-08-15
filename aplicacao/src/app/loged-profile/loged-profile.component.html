@@ -1,0 +1,32 @@
+<div class="container">
+
+
+  <header>
+    <div class="menu-nav">
+      <img src="/assets/logo-info.png" alt="">
+      <div class="menu-nav-items">
+        <li>+55 (81) 3424-9555 </li>
+        <li>contato@informata.com.br</li>
+        <button pButton type="button" class="p-button-raised p-button-rounded">
+          <i class="pi pi-power-off"></i></button>
+      </div>
+    </div>
+
+  </header>
+
+
+  <div class="produtos-title">
+    <h1>Produtos</h1>
+  </div>
+
+  <p-orderList [value]="cars" filterBy="brand">
+
+    <ng-template let-car pTemplate="item">
+      <div>
+        <div>{{car.brand}} - {{car.year}} - {{car.color}}</div>
+      </div>
+    </ng-template>
+  </p-orderList>
+
+
+</div>

@@ -35,3 +35,40 @@ body {
   color: #34495E !important;
   transition: background 0.4s;
 }
+
+
+/*PAGINA Loged*/
+
+.p-orderlist {
+  width: 70% !important;
+  padding: 0 !important;
+  margin: 0 auto;
+  margin-top: 4em !important;
+
+}
+
+.p-orderlist-filter {
+  width: 50%;
+  margin: 0 auto;
+}
+
+
+.p-orderlist .p-orderlist-list {
+  border-bottom-right-radius: 10px !important;
+  border-bottom-left-radius: 10px !important;
+  box-shadow: 1px 50px 100px #8d8d8d;
+}
+
+.p-orderlist .p-orderlist-controls {
+  padding: 0 !important;
+}
+
+.p-orderlist .p-orderlist-controls .p-button {
+  display: none;
+}
+
+.menu-nav-items .p-button-label {
+  display: none;
+}
+
+/*Fim PAGINA Loged*/

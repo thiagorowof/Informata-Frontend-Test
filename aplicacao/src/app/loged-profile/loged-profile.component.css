@@ -1,0 +1,64 @@
+.menu-nav {
+  margin: 0 auto;
+  padding-top: 2%;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-nav-items {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.menu-nav-items i {
+  padding: 0.3em;
+  margin: 0.3em;
+}
+
+.menu-nav-items li {
+  padding: 1em;
+  color: #707070;
+  border-left: 2px solid #2C3E50;
+}
+
+.menu-nav-items li+li {
+  border-right: 2px solid #2C3E50;
+  margin-right: 20px;
+}
+
+.produtos-title {
+  text-align: center;
+  margin-top: 3em !important;
+  color: #ffffff;
+}
+
+
+
+/*RESPONSIVIDADE*/
+
+
+@media (max-width: 700px) {
+
+
+  .menu-nav-items li {
+    display: none;
+  }
+
+  .menu-nav {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menu-nav img {
+    width: 40%;
+    margin-top: 2em;
+    padding-right: 1em;
+  }
+
+  .menu-nav button {
+    margin-top: 2em;
+  }
+}
