@@ -14,13 +14,20 @@
 npm install
 ```
 
-- em seguida execute
+## Para executar a aplicação desacoplada de uma API siga os passos abaixo
+- Após navegar até a raiz do projeto, abra o terminal e execute
+
+```bash
+json-server ./src/app/shared/mocks/db.json
+```
+
+- em seguida abra outra janela ou outro terminal e execute
 
 ```bash
 ng serve
 ```
 
-- Com o projeto servindo abra no navegador e vá para o endereço [http://localhost:4200](http://localhost:4200)
+- Com o projeto servindo, abra no navegador e vá para o endereço [http://localhost:4200](http://localhost:4200)
 
 ## Login
 - Para acessar a aplicação use
@@ -34,3 +41,25 @@ ng serve
 >**NOTA**: Esta aplicação não está conectada a uma API externa de usuários, por isso os dados acima levam a um usuário padrão.
 
 >Está aplicação não persiste em um banco de dados, apenas armazena no local storage do navegador.
+
+## Para executar a aplicação conectada a uma API externa siga os passos abaixo
+- Após navegar até a raiz do projeto, abra o terminal e execute
+
+```bash
+ng serve --prod
+```
+
+- Com o projeto servindo, abra no navegador e vá para o endereço [http://localhost:4200](http://localhost:4200)
+
+## Login
+- Para acessar a aplicação use
+```json
+{
+  "cpf": "11111111111",
+  "senha": "123456"
+}
+```
+
+>**NOTA**: Esta aplicação não está conectada a uma API externa de usuários, por isso os dados acima levam a um usuário padrão.
+
+> As funcionalidades de adicionar, editar e salvar neste modo (--prod) são meramente ilustrativa tendo em vista apenas ter o consume de um JSON.
