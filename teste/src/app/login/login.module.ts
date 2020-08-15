@@ -17,19 +17,30 @@ import {AppRoutingModule} from '../app-routing';
 import { LoginComponent } from './login.component';
 import {CardModule} from 'primeng/card';
 
+
+
+
+import {OrderListModule, OrderList} from 'primeng/orderlist';
+
+
+
 @NgModule({
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     InputTextModule,
-		CheckboxModule,
-		ButtonModule,
+		CheckboxModule,	
 		RadioButtonModule,
     FormsModule,
     PanelModule,
     PasswordModule,
     AppRoutingModule,
-    CardModule
+    CardModule,
+    
+    
+    OrderListModule,
+    OrderList,
+    ButtonModule
   ],
   declarations: [ LoginComponent, LoginComponent ],
   bootstrap:    [ LoginComponent ]

@@ -19,19 +19,20 @@
         <div class="ui-g">
           <div class="ui-lg-2 ui-md-2 ui-sm-2">
             <i class="pi pi-user"></i>
-            <input type="text" pInputText placeholder="Usuário" />
+            <input [(ngModel)]="usuario.nome" type="text" pInputText placeholder="Usuário" />
           </div>
         </div>
         <div class="ui-g">
           <div class="ui-lg-2 ui-md-2 ui-sm-2">
             <i class="pi pi-lock"></i>
-            <input type="password" pPassword placeholder="Senha" />          
+            <input [(ngModel)]="usuario.senha" type="password" pPassword placeholder="Senha" />          
           </div>
         </div>
         <div class="ui-g">
           <div class="ui-lg-2 ui-md-2 ui-sm-2">
               <i class=""></i>
-              <button type="button" class="btn btn-primary">Entrar</button>         
+              <button type="button" class="btn btn-primary"
+               (click)="fazerLogin()">Entrar</button>         
             </div>
           </div>        
         </div>

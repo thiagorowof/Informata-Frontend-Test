@@ -1,0 +1,23 @@
+<div class="container animate">
+  <div class="card">  
+
+    <form [formGroup]="profileForm">
+  
+      <label>
+        <i class="pi pi-user"></i>
+        Usuário 
+        <input type="text" formControlName="user">
+      </label>
+    
+      <label>
+        <i class="pi pi-lock"></i>
+        Senha 
+        <input type="password" formControlName="password">
+      </label>
+  
+      <button type="submit">Login</button>
+    </form>
+   
+    
+  </div>
+</div>

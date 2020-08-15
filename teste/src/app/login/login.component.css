@@ -19,8 +19,17 @@ i {
 
 button {
     margin: 20px 1px 1px 1px;
+    margin-bottom: 100px;
 }
 
 .card-body{
-  margin: 17px;
+  margin: 20px 1px 1px 1px;
+  
+}
+
+.container {
+  position: absolute;
+	left: 35%;
+	top: 30%
+
 }

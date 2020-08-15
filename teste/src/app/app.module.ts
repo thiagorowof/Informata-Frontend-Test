@@ -18,12 +18,18 @@ import { MenuService } from './menu/menu.service';
 //import {OrderListModule, OrderList} from 'primeng/orderlist';
 import {MenubarModule} from 'primeng/menubar';
 import {AutoCompleteModule} from 'primeng/autocomplete';
+import {CardModule} from 'primeng/card';
+import { ButtonModule } from 'primeng/button';
+
+import { LoginComponent } from './login/login.component';
+import { AuthService } from './login/auth.service';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    MenuComponent    
+    MenuComponent,
+    LoginComponent    
   ],
   imports: [
     BrowserModule,
@@ -35,11 +41,13 @@ import {AutoCompleteModule} from 'primeng/autocomplete';
     MenubarModule,
     FormsModule,
     ReactiveFormsModule ,
-    AutoCompleteModule
-    //OrderListModule,
-   // OrderList
+    AutoCompleteModule,
+    CardModule,
+    ButtonModule,
+    
+    
   ],
-  providers: [MenuService],
+  providers: [MenuService, LoginComponent, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
