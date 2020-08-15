@@ -1,43 +1,41 @@
-<header>
-  <h2>Lista de Produtos</h2>
-</header>
+<div class=".table-products">
 
-<main role="main">
-  <section>
-    <div>
-      <p-table [value]="products">
-        <ng-template pTemplate="header">
-          <tr>
-            <th style="width: 80px">Id</th>
-            <th>Código Erp</th>
-            <th>Apresentacão</th>
-            <th>Nome Comercial</th>
-            <th>Nome Comercial Com Apresentação</th>
-            <th>Unidade Medida Anvisa</th>
-            <th>Código Barras Principal</th>
-          </tr>
-        </ng-template>
+  <p-table #dt [columns]="cols" [value]="products" [paginator]="true" [rows]="10">
 
-        <ng-template pTemplate="body" let-product>
-          <tr>
-            <td>{{product.id}}</td>
-            <td>{{product.codigoErp}}</td>
-            <td>{{product.apresentacao}}</td>
-            <td>{{product.nomeComercial}}</td>
-            <td>{{product.nomeComercialComApresentacao}}</td>
-            <td>{{product.unidadeMedidaAnvisa}}</td>
-            <td>{{product.codigoBarrasPrincipal}}</td>
-          </tr>
-        </ng-template>
-      </p-table>
-    </div>
-  </section>
-</main>
+    <ng-template pTemplate="caption">
+      <div style="text-align: right">
+        <i class="pi pi-search" style="margin:4px 4px 0 0"></i>
+        <input type="text" pInputText size="30" placeholder="Filtro global"
+          (input)="dt.filterGlobal($event.target.value, 'contains')" style="width:auto">
+      </div>
+    </ng-template>
 
-<!-- id: number;
-codigoErp: string;
-apresentacao: string;
-nomeComercial: string;
-nomeComercialComApresentacao: string;
-unidadeMedidaAnvisa: string;
-codigoBarrasPrincipal: string; -->
+    <ng-template pTemplate="header" let-columns>
+      <tr>
+        <th *ngFor="let col of columns">
+          {{col.header}}
+        </th>
+      </tr>
+      <tr>
+        <th *ngFor="let col of columns" [ngSwitch]="col.field">
+          <input *ngSwitchCase="'id'" pInputText type="text" size="12" (input)="dt.filter($event.target.value, col.field, 'contains')">
+          <input *ngSwitchCase="'codigoErp'" pInputText type="text" size="12" (input)="dt.filter($event.target.value, col.field, 'contains')">
+          <input *ngSwitchCase="'apresentacao'" pInputText type="text" size="12" (input)="dt.filter($event.target.value, col.field, 'contains')">
+          <input *ngSwitchCase="'nomeComercial'" pInputText type="text" size="12" (input)="dt.filter($event.target.value, col.field, 'contains')">
+          <input *ngSwitchCase="'nomeComercialComApresentacao'" pInputText type="text" size="12" (input)="dt.filter($event.target.value, col.field, 'contains')">
+          <input *ngSwitchCase="'unidadeMedidaAnvisa'" pInputText type="text" size="12" (input)="dt.filter($event.target.value, col.field, 'contains')">
+          <input *ngSwitchCase="'codigoBarrasPrincipal'" pInputText type="text" size="12" (input)="dt.filter($event.target.value, col.field, 'contains')">
+        </th>
+      </tr>
+    </ng-template>
+
+    <ng-template pTemplate="body" let-rowData let-columns="columns">
+      <tr [pSelectableRow]="rowData">
+        <td *ngFor="let col of columns">
+          {{rowData[col.field]}}
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+
+</div>
