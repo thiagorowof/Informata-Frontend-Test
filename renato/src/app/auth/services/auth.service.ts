@@ -29,7 +29,6 @@ export class AuthService {
         token: 'adsfgzdfhsdghwdfbsdgfhsdgfnbsdhnv',
         user: {
           name: 'Renato Valentim',
-          email: 'renato@renato.com',
         },
       }).pipe(
         tap((user: ResponseAuthModel) => {
