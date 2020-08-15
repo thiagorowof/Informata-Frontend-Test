@@ -40,12 +40,30 @@
         <th *ngFor="let col of columns">
           {{ col.header }}
         </th>
+        <th></th>
       </tr>
     </ng-template>
     <ng-template pTemplate="body" let-rowData let-columns="columns">
       <tr [pSelectableRow]="rowData">
         <td *ngFor="let col of columns">
           {{ rowData[col.field] }}
+        </td>
+        <td>
+          <button
+            [routerLink]="['/update']" routerLinkActive="router-link-active"
+            (click)="update(rowData)"
+            pButton
+            pRipple
+            icon="pi pi-pencil"
+            class="p-button-rounded p-button-success p-mr-2"
+          ></button>
+          <button
+            (click)="remove(rowData)"
+            pButton
+            pRipple
+            icon="pi pi-trash"
+            class="p-button-rounded p-button-warning"
+          ></button>
         </td>
       </tr>
     </ng-template>
