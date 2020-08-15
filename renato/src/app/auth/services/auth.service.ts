@@ -31,10 +31,12 @@ export class AuthService {
           name: 'Renato Valentim',
           email: 'renato@renato.com',
         },
-      }).pipe(tap((user: ResponseAuthModel) => {
-        localStorage.setItem(KEY_CURRENT_USER, JSON.stringify(user));
-        this.currentUserSubject.next(user);
-      }));
+      }).pipe(
+        tap((user: ResponseAuthModel) => {
+          localStorage.setItem(KEY_CURRENT_USER, JSON.stringify(user));
+          this.currentUserSubject.next(user);
+        })
+      );
     }
   }
 
@@ -65,12 +67,12 @@ export class AuthService {
   }
 
   get isUserLogged$(): Observable<boolean> {
-    return this.currentUser$.pipe(map(((user: ResponseAuthModel) => user != null)));
+    return this.currentUser$.pipe(
+      map((user: ResponseAuthModel) => user != null)
+    );
   }
 
   get logout$(): Observable<any> {
     return this.logoutSubject.asObservable();
   }
-
-
 }

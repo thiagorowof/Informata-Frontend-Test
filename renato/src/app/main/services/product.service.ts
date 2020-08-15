@@ -1,11 +1,11 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { take } from 'rxjs/operators';
 import { CrudService } from '../../shared/crud.service';
+import { API_POST_LOCAL_STORAGE } from '../../shared/mocks/api-post-local-storage';
 import { ProductModel } from '../../shared/models/product.model';
 import { API_URL } from '../../shared/url-api';
-import { API_POST_LOCAL_STORAGE } from '../../shared/mocks/api-post-local-storage';
-import { Observable, BehaviorSubject } from 'rxjs';
-import { take, tap, map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root',
