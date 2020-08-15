@@ -1,0 +1,32 @@
+.login {
+  width: 95vw;
+  height: 95vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginItens {
+  width: 300px;
+  height: 300px;
+  box-shadow: 0 8px 26px 0  rgba(77, 1, 87, 0.404);
+  padding: 1em;
+  margin: auto;
+  border-radius: 25px;
+}
+
+@media (min-width: 400px) {
+  .loginItens {
+    width: 350px;
+    height: 400px;
+  }
+}
+
+.inputArea {
+  width: 100%;
+}
+
+.larguraBtn{
+
+}

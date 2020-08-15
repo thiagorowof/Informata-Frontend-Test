@@ -1,0 +1,29 @@
+.cadastro {
+  padding: 0.5em;
+  width: 95vw;
+  height: 95vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+@media (min-width: 400px) {
+  .cadastro {
+    padding: 2em;
+  }
+}
+
+.cadastroItens {
+  box-shadow: 0 8px 26px 0 rgba(77, 1, 87, 0.404);
+  padding: 1em;
+  margin: auto;
+  border-radius: 25px;
+  margin-bottom: 1em;
+}
+
+.areaEndereco {
+  width: 100%;
+}
