@@ -1,12 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { delay, take } from 'rxjs/operators';
+import { take } from 'rxjs/operators';
 
 export class CrudService<T> {
-  constructor(protected http: HttpClient, private URL_API: string) {}
+  constructor(protected http: HttpClient, private URL_API: string) {
+  }
 
   list(): Observable<T[]> {
-    return this.http.get<T[]>(this.URL_API).pipe(delay(1000));
+    return this.http.get<T[]>(this.URL_API).pipe(take(1));
   }
 
   loadById(id: number): Observable<T> {
