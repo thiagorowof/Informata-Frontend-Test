@@ -1,42 +1,40 @@
 <div class="container">
-
-  <div class="panel-container">
+  <div class="panel-container p-shadow-8">
     <p-panel>
-      <p-header class="register-title">
+      <p-header class="panel-title">
         Registro
       </p-header>
+
       <div class="p-fluid">
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
 
-        <div class="p-field">
-          <label for="firstname">Nome</label>
-          <input type="text" pInputText>
-        </div>
-
-        <div class="p-field">
-          <label for="lastname">Sobrenome</label>
-          <input type="text" pInputText>
-        </div>
-
-        <div class="p-field">
-          <label for="firstname1">Nome de usuário</label>
-          <input type="text" pInputText>
-        </div>
-
-        <div class="p-field">
-          <label for="lastname1">Senha</label>
-          <input type="text" pInputText>
-        </div>
-
-        <div class="p-formgroup-inline">
-          <div class="p-field-checkbox">
-            <button pButton type="button" label="Cadastrar"></button>
+          <div class="p-field form-group">
+            <label for="firstName">First Name</label>
+            <input type="text" formControlName="firstName" pInputText />
           </div>
 
-          <div class="p-field-checkbox">
-            <button pButton type="button" label="Cancelar" class="p-button-link" routerLink="/auth/login"></button>
+          <div class="p-field form-group">
+            <label for="lastName">Last Name</label>
+            <input type="text" formControlName="lastName" pInputText />
           </div>
-        </div>
 
+          <div class="p-field form-group">
+            <label for="username">Username</label>
+            <input type="text" formControlName="username" pInputText />
+          </div>
+
+          <div class="p-field form-group">
+            <label for="password">Password</label>
+            <input type="password" formControlName="password" pInputText />
+          </div>
+
+          <div class="p-formgroup-inline">
+            <div>
+              <button pButton pRipple label="Salvar" class="p-button-raised" [disabled]="loading"></button>
+            </div>
+            <p-button label="Cancelar" styleClass="p-button-link" routerLink="../login"></p-button>
+          </div>
+        </form>
       </div>
     </p-panel>
   </div>
