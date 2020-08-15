@@ -7,7 +7,8 @@ import { PanelModule } from 'primeng/panel';
 import { InputTextModule } from 'primeng/inputtext';
 import { PasswordModule } from 'primeng/password';
 import { ToolbarModule } from 'primeng/toolbar';
-
+import { TableModule } from 'primeng/table';
+import { ScrollPanelModule } from 'primeng/scrollpanel';
 
 @NgModule({
   imports: [ ],
@@ -18,7 +19,9 @@ import { ToolbarModule } from 'primeng/toolbar';
     PanelModule,
     InputTextModule,
     PasswordModule,
-    ToolbarModule
+    ToolbarModule,
+    TableModule,
+     ScrollPanelModule
   ],
   declarations: []
 })
