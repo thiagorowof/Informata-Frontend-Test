@@ -33,7 +33,7 @@ import { OrderListModule } from 'primeng/orderlist';
     InputTextModule,
     ButtonModule,
     PasswordModule,
-    OrderListModule
+    OrderListModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
