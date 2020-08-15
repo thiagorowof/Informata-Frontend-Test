@@ -1,1 +1,74 @@
-<p>register-products works!</p>
+  <div class="card register-product-form p-shadow-2 p-p-4">
+    <h2>Cadastrar produto</h2>
+    <div class="p-fluid" [formGroup]="registerProductForm">
+      <div class="p-field">
+        <label for="codigoErp">Código ERP</label>
+        <input
+          id="codigoErp"
+          type="text"
+          pInputText
+          formControlName="codigoErp"
+        />
+      </div>
+
+      <div class="p-field">
+        <label for="apresentacao">Apresentação</label>
+        <input
+          id="apresentacao"
+          type="text"
+          pInputText
+          formControlName="apresentacao"
+        />
+      </div>
+
+      <div class="p-field">
+        <label for="nomeComercial">Nome Comercial Apresentação</label>
+        <input
+          id="nomeComercial"
+          type="text"
+          pInputText
+          formControlName="nomeComercial"
+        />
+      </div>
+
+      <div class="p-field">
+        <label for="unidadeMedidaAnvisa">Unidade Medida Anvisa</label>
+        <input
+          id="unidadeMedidaAnvisa"
+          type="text"
+          pInputText
+          formControlName="unidadeMedidaAnvisa"
+        />
+      </div>
+
+      <div class="p-field">
+        <label for="codigoBarrasPrincipal">Código de Barras</label>
+        <input
+          id="codigoBarrasPrincipal"
+          type="text"
+          pInputText
+          formControlName="codigoBarrasPrincipal"
+        />
+      </div>
+    </div>
+    <div style="float: right; margin-top: 10px;">
+      <button
+        pButton
+        pRipple
+        type="button"
+        label="Cancelar"
+        class="p-button-secondary p-mr-2"
+        icon="pi pi-times"
+        (click)="cancel()"
+      ></button>
+
+      <button
+      [disabled]="!registerProductForm.valid"
+        type="button"
+        pButton
+        icon="pi pi-plus"
+        label="Adicionar"
+        (click)="save()"
+      ></button>
+    </div>
+  </div>

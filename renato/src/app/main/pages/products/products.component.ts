@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductService } from '../../services/product.service';
+import { FilterUtils } from 'primeng/utils';
 import { Observable } from 'rxjs';
 import { ProductModel } from 'src/app/shared/models/product.model';
-import { FilterUtils } from 'primeng/utils';
-import { Router } from '@angular/router';
+import { ProductService } from '../../services/product.service';
 
 @Component({
   selector: 'app-products',
@@ -12,11 +11,12 @@ import { Router } from '@angular/router';
 })
 export class ProductsComponent implements OnInit {
   products$: Observable<ProductModel[]>;
+  actualUser: string;
 
   cols: any[];
   yearTimeout: any;
 
-  constructor(private productService: ProductService, private router: Router) {}
+  constructor(private productService: ProductService) {}
 
   ngOnInit(): void {
     this.products$ = this.productService.list();

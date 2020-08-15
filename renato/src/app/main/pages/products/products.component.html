@@ -1,49 +1,55 @@
-<p-table
-  #dt
-  [columns]="cols"
-  [value]="products$ | async"
-  selectionMode="single"
-  [paginator]="true"
-  [rows]="10"
->
-  <ng-template pTemplate="caption">
-    <div style="display: flex;">
-      <div style="justify-content: center;">
-        <button
-          type="button"
-          pButton
-          icon="pi pi-plus"
-          [routerLink]="['new-product']" routerLinkActive="router-link-active"
-          label="Adicionar"
-        ></button>
-      </div>
-      <div style="margin-left: 50%;">
-        <div style="display: flex;">
-          <i class="pi pi-search" style="margin: 4px 4px 0 0;"></i>
-          <input
-            type="text"
-            pInputText
-            size="50"
-            placeholder="Buscar"
-            (input)="dt.filterGlobal($event.target.value, 'contains')"
-            style="width: auto;"
-          />
+<div class="p-shadow-2 p-p-4">
+  <p-table
+    #dt
+    [columns]="cols"
+    [value]="products$ | async"
+    selectionMode="single"
+    [paginator]="true"
+    [rows]="10"
+  >
+    <ng-template pTemplate="caption">
+      <div style="display: flex;">
+        <div style="justify-content: center;">
+          <div style="display: flex;">
+            <input
+              type="text"
+              pInputText
+              size="50"
+              placeholder="Buscar"
+              (input)="dt.filterGlobal($event.target.value, 'contains')"
+              style="width: auto;"
+            />
+          </div>
+        </div>
+
+        <div>
+          <button
+            style="margin-left: 410%;"
+            type="button"
+            pButton
+            icon="pi pi-plus"
+            [routerLink]="['new-product']"
+            routerLinkActive="router-link-active"
+            label="Adicionar"
+          ></button>
         </div>
       </div>
-    </div>
-  </ng-template>
-  <ng-template pTemplate="header" let-columns>
-    <tr>
-      <th *ngFor="let col of columns">
-        {{ col.header }}
-      </th>
-    </tr>
-  </ng-template>
-  <ng-template pTemplate="body" let-rowData let-columns="columns">
-    <tr [pSelectableRow]="rowData">
-      <td *ngFor="let col of columns">
-        {{ rowData[col.field] }}
-      </td>
-    </tr>
-  </ng-template>
-</p-table>
+    </ng-template>
+    <ng-template pTemplate="header" let-columns>
+      <tr>
+        <th *ngFor="let col of columns">
+          {{ col.header }}
+        </th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-rowData let-columns="columns">
+      <tr [pSelectableRow]="rowData">
+        <td *ngFor="let col of columns">
+          {{ rowData[col.field] }}
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+
+  <!-- <pre>{{ newProduct | async | json }}</pre> -->
+</div>
