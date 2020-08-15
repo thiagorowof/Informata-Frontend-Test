@@ -24,11 +24,13 @@ import { LoginComponent } from './login/login.component';
 import { AuthService } from './login/auth.service';
 
 import { AuthGuard } from './login/auth.guard';
+import { Error404pageComponent } from './error404page/error404page.component';
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
-    LoginComponent    
+    LoginComponent,
+    Error404pageComponent    
   ],
   imports: [
     BrowserModule,

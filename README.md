@@ -8,6 +8,10 @@ Start
     ng serve
 
 Release History
+
+    0.2.3
+
+        Adicionado página de erro para rota não encontrada
     
     0.2.2
 
