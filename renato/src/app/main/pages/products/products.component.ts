@@ -3,6 +3,7 @@ import { FilterUtils } from 'primeng/utils';
 import { Observable } from 'rxjs';
 import { ProductModel } from 'src/app/shared/models/product.model';
 import { ProductService } from '../../services/product.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-products',
@@ -12,14 +13,15 @@ import { ProductService } from '../../services/product.service';
 export class ProductsComponent implements OnInit {
   products$: Observable<ProductModel[]>;
   actualUser: string;
+  selectedProduct: ProductModel;
 
   cols: any[];
   yearTimeout: any;
 
-  constructor(private productService: ProductService) {}
+  constructor(private productService: ProductService, private router: Router) {}
 
   ngOnInit(): void {
-    this.products$ = this.productService.list();
+    this.refresh();
 
     this.cols = [
       { field: 'codigoErp', header: 'Código ERP' },
@@ -46,6 +48,10 @@ export class ProductsComponent implements OnInit {
     };
   }
 
+  refresh(): void {
+    this.products$ = this.productService.list();
+  }
+
   onYearChange(event, dt): void {
     if (this.yearTimeout) {
       clearTimeout(this.yearTimeout);
@@ -54,5 +60,15 @@ export class ProductsComponent implements OnInit {
     this.yearTimeout = setTimeout(() => {
       dt.filter(event.value, 'year', 'gt');
     }, 150);
+  }
+
+  update(product: ProductModel): void {
+    this.router.navigate(['products/update-product', product.id]);
+  }
+
+  remove(product: ProductModel): void {
+    this.productService.delete(product.id).subscribe((success) => {
+      this.refresh();
+    });
   }
 }
