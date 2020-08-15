@@ -9,6 +9,11 @@ import { PasswordModule } from 'primeng/password';
 import { ToolbarModule } from 'primeng/toolbar';
 import { TableModule } from 'primeng/table';
 import { ScrollPanelModule } from 'primeng/scrollpanel';
+import { ToastModule } from 'primeng/toast';
+import { SliderModule } from 'primeng/slider';
+import { ContextMenuModule } from 'primeng/contextmenu';
+import { DialogModule } from 'primeng/dialog';
+import { DropdownModule } from 'primeng/dropdown';
 
 @NgModule({
   imports: [ ],
@@ -21,7 +26,12 @@ import { ScrollPanelModule } from 'primeng/scrollpanel';
     PasswordModule,
     ToolbarModule,
     TableModule,
-     ScrollPanelModule
+    ScrollPanelModule,
+    ToastModule,
+    SliderModule,
+    ContextMenuModule,
+    DialogModule,
+    DropdownModule,
   ],
   declarations: []
 })
