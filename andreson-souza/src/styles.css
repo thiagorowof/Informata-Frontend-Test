@@ -4,7 +4,23 @@ html,
 body {
   margin: 0;
   font-family: "Segoe UI", sans-serif;
-  background-color: #FFFAFA;
+  background-color: #fffafa;
 
 }
 
+@media screen {
+  .panel-container {
+    min-width: 200px;
+    max-width: 450px;
+    margin-top: 100px !important;
+    margin: 0 auto;
+  }
+}
+
+.panel-title {
+  font-size: 24px;
+}
+
+:host ::ng-deep margin-right-button {
+  margin-right: .25em;
+}
