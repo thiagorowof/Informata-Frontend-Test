@@ -8,6 +8,10 @@ Start
     ng serve
 
 Release History
+    
+    0.2.1
+
+        Adicionado método logout
 
     0.2.0
 

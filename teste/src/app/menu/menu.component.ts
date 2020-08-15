@@ -4,8 +4,8 @@ import {MenuItem} from 'primeng/api';
 import { FormGroup, FormControl } from '@angular/forms';
 
 import { FilterUtils } from 'primeng/utils';
-import { SelectItem } from 'primeng/api';
-
+import { AuthService } from '../login/auth.service'
+import { ActivatedRoute, Router } from '@angular/router';
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
@@ -118,9 +118,12 @@ codigoErp: number;
       },
       {separator:true},
       {
-          label: 'Quit', icon: 'pi pi-fw pi-power-off'
+          label: 'Quit', icon: 'pi pi-fw pi-power-off', routerLink: '/',
+          command: (event) => this.onLogout()
       }
   ];
+
+ 
 
   //filtro
   FilterUtils['custom'] = (value, filter): boolean => {
@@ -144,7 +147,10 @@ codigoErp: number;
   });
   }
 //isso aqui é abaixo do ng on init
-  
+
+onLogout(){
+    return localStorage.clear();
+}
 
 }
 

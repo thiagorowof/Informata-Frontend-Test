@@ -18,6 +18,7 @@ import { FormGroup, FormControl } from '@angular/forms';
 
 import {OrderListModule, OrderList} from 'primeng/orderlist';
 import {AutoCompleteModule} from 'primeng/autocomplete';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @NgModule({
   imports: [
@@ -34,7 +35,9 @@ import {AutoCompleteModule} from 'primeng/autocomplete';
     ReactiveFormsModule,
     FormGroup,
     FormControl,
-    AutoCompleteModule
+    AutoCompleteModule,
+    ActivatedRoute,
+    Router
     
     
   ],
