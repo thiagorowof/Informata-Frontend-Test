@@ -1,17 +1,22 @@
-<h2>Criar minha conta</h2>
-
 <form (ngSubmit)="onSubmit()" #form="ngForm">
-  <div>
-    <label>Nome</label>
-    <input type="text" name="email" id="email" [(ngModel)]="account.name" required />
+  <div class="p-fluid">
+    <div class="p-field">
+      <h2>Cadastre-se</h2>
+    </div>
+    <div class="p-field">
+      <label>Nome</label>
+      <input type="text" name="email" id="email" [(ngModel)]="account.name" pInputText required />
+    </div>
+    <div class="p-field">
+      <label>E-mail</label>
+      <input type="email" name="email" id="email" [(ngModel)]="account.email" pInputText required />
+    </div>
+    <div class="p-field">
+      <label>Senha</label>
+      <input type="password" name="password" id="password" [(ngModel)]="account.password" pInputText required />
+    </div>
+    <div class="p-field">
+      <button type="submit" pButton [routerLink]="['/login']" label="Cadastrar-se" [disabled]="form.form.invalid"></button>
+    </div>
   </div>
-  <div>
-    <label>E-mail</label>
-    <input type="email" name="email" id="email" [(ngModel)]="account.email" required />
-  </div>
-  <div>
-    <label>Senha</label>
-    <input type="password" name="password" id="password" [(ngModel)]="account.password" required />
-  </div>
-  <button type="submit" [routerLink]="['/login']" [disabled]="form.form.invalid">Criar minha conta</button>
 </form>

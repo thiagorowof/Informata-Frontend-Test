@@ -1,14 +1,22 @@
-<h2 class="text-center">Entrar</h2>
-
 <form (ngSubmit)="onSubmit()" #form="ngForm">
-  <div>
-    <label>E-mail</label>
-    <input type="email" name="email" id="email" [(ngModel)]="login.email" required />
+  <div class="p-fluid">
+    <div class="p-field">
+      <h2>Entrar</h2>
+    </div>
+    <div class="p-field">
+      <label>E-mail</label>
+      <input type="email" name="email" id="email" pInputText  [(ngModel)]="login.email" required />
+    </div>
+    <div class="p-field">
+      <label>Senha</label>
+      <input type="password" name="password" id="password" pInputText [(ngModel)]="login.password" required />
+    </div>
+    <div class="p-field">
+      <button pButton type="submit" label="Entrar" [disabled]="form.form.invalid"></button>
+    </div>
+    <div class="p-field">
+      <button pButton type="button" label="Cadastre-se" [routerLink]="['/create-account']"></button>
+    </div>
   </div>
-  <div>
-    <label>Senha</label>
-    <input type="password" name="password" id="password" [(ngModel)]="login.password" required />
-  </div>
-  <button type="submit" [disabled]="form.form.invalid">Entrar</button>
-  <button type="button" [routerLink]="['/create-account']">Criar conta</button>
 </form>
+

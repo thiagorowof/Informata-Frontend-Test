@@ -2,7 +2,7 @@
   <button pButton label="Logout" class="p-button-danger" icon="pi pi-fw pi-power-off" onclick="localStorage.removeItem('token');window.location.reload();"></button>
 </p-menubar>
 
-<div class="card" style="margin: 2em;">
+<div class="card" style="margin-top: 2em;">
   <p-table [value]="products" selectionMode="single" dataKey="code">
     <ng-template pTemplate="caption">
       <div class="table-header">
