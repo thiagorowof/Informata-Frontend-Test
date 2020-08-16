@@ -7,14 +7,14 @@ no sistema, mostrando alguns dados e um botão para sair do sistema.
 
 # Tabela de conteúdos
 =================
-<p>
- Status •
- Features • 
- Pre-Requisitos • 
- Tecnologias • 
- Autor •
- Licença • 
-</p>
+<ul>
+ <li>Status </li>
+ <li>Features </li> 
+ <li>Pre-Requisitos </li>  
+ <li>Tecnologias  </li>
+ <li>Autor </li>
+ <li>Licença  </li>
+</ul>
 
 ## Status do Projeto
 
