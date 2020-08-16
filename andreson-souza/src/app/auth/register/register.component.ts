@@ -3,10 +3,12 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { first } from 'rxjs/operators';
 
+
 import { AuthService } from '../../shared/services/auth.service';
 
 @Component({
-  templateUrl: 'register.component.html' })
+  templateUrl: 'register.component.html'
+})
 export class RegisterComponent implements OnInit {
   form: FormGroup;
   loading = false;
@@ -19,16 +21,28 @@ export class RegisterComponent implements OnInit {
     private authService: AuthService,
   ) { }
 
-  ngOnInit() {
+  ngOnInit(): any {
     this.form = this.formBuilder.group({
       firstName: ['', Validators.required],
       lastName: ['', Validators.required],
       username: ['', Validators.required],
-      password: ['', [Validators.required, Validators.minLength(6)]]
+      password: ['', [Validators.required, Validators.minLength(6)]],
+      password2: ['', [Validators.required, Validators.minLength(6)]]
     });
   }
 
   get f() { return this.form.controls; }
+
+  matchingPasswords(group: FormGroup) {
+    if (group) {
+      const password = group.controls.password.value;
+      const password2 = group.controls.password2.value;
+      if (password === password2) {
+        return null;
+      }
+    }
+    return { matching: false };
+  }
 
   onSubmit() {
     this.submitted = true;
@@ -48,4 +62,5 @@ export class RegisterComponent implements OnInit {
           console.error(error);
         });
   }
+
 }
