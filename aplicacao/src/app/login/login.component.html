@@ -1,6 +1,6 @@
 <div class="container">
 
-
+  <!--Cabeçalho-->
   <header>
     <div class="menu-nav">
       <img src="/assets/logo-info.png" alt="">
@@ -11,15 +11,19 @@
     </div>
   </header>
 
+
+  <!-- Tela com formulário de Login-->
   <div class="p-grid p-justify-center">
     <div class="p-col-10 p-md-6 p-lg-3 card ">
-      <!-- Formulário Login e Senha -->
       <p-card>
+
         <div class="p-grid">
           <div class="p-col-12 text-center">
             <h2>LOGIN</h2>
           </div>
 
+
+          <!-- Input de usuário -->
           <div class="p-col-12">
             <span class="p-float-label">
               <input class="p-col-12" id="float-input" type="text" pInputText>
@@ -27,6 +31,7 @@
             </span>
           </div>
 
+          <!-- Input de senha -->
           <div class="p-col-12">
             <span class="p-float-label">
               <input class="p-col-12" id="float-input" type="password" pPassword>
@@ -34,10 +39,11 @@
             </span>
           </div>
 
+          <!-- Botões Entrar e Cadastrar -->
           <div class="p-col-12">
-            <a routerLink=""> <button class="p-col-12 btn-primary-color" pButton type="button"
-                label="ENTRAR"></button></a>
+            <button class="p-col-12 btn-primary-color" pButton type="button" label="ENTRAR"></button>
           </div>
+
           <div class="p-col-12">
             <a routerLink="/register"> <button class="btn-secondary-color p-button-outlined p-col-12" pButton
                 type="button" label="CADASTRAR"></button> </a>

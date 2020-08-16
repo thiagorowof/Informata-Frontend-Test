@@ -1,4 +1,4 @@
-/* You can add global styles to this file, and also import other style files */
+/*ESTILOS GLOBAIS*/
 
 body {
   background-color: #f8f9fa;
@@ -41,7 +41,8 @@ a {
 }
 
 
-/*PAGINA Loged*/
+
+/*COMPONENTE LOGED-PROFILE*/
 
 .p-orderlist {
   width: 70% !important;
@@ -55,7 +56,6 @@ a {
   width: 50%;
   margin: 0 auto;
 }
-
 
 .p-orderlist .p-orderlist-list {
   border-bottom-right-radius: 10px !important;
@@ -75,4 +75,4 @@ a {
   display: none;
 }
 
-/*Fim PAGINA Loged*/
+/* -- */

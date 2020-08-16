@@ -15,22 +15,14 @@ export class LogedProfileComponent implements OnInit {
 
   constructor(private service: ProdutosService) { }
 
-
+  /*Botão de Logout limpando o localStorage */
   logout() {
     localStorage.clear();
-
   }
 
+  /*Ao iniciar a tela chamando a lista de produtos e listando dentro do quadro */
   ngOnInit() {
     this.service.list().subscribe(dados => this.produtos = dados);
   }
-  /*cars: any[];
-
-  ngOnInit() {
-    this.cars = [{ brand: 'Mercedes', year: '2020', color: 'Red' },
-    { brand: 'Mercedes', year: '2020', color: 'Red' },
-    { brand: 'Ranaut', year: '2020', color: 'Red' }
-    ]
-  }*/
 }
 

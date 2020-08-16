@@ -1,6 +1,6 @@
 <div class="container">
 
-
+  <!--Cabeçalho-->
   <header>
     <div class="menu-nav">
       <img src="/assets/logo-info.png" alt="">
@@ -12,7 +12,7 @@
   </header>
 
 
-  <!-- Formulário Cadastro Login e Senha -->
+  <!-- Tela com formulário de Cadastro-->
   <div class="p-grid p-justify-center">
     <div class="p-col-10 p-md-6 p-lg-3 card ">
       <p-card>
@@ -21,6 +21,7 @@
             <h2>CADASTRO</h2>
           </div>
 
+          <!-- Input de cadastro de usuário -->
           <form class="p-grid" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
             <div class="p-col-12">
               <span class="p-float-label">
@@ -29,6 +30,7 @@
               </span>
             </div>
 
+            <!-- Input de cadastro de senha do usuário -->
             <div class="p-col-12">
               <span class="p-float-label">
                 <input class="p-col-12" id="float-input" type="password" formControlName="senha" pPassword>
@@ -36,6 +38,7 @@
               </span>
             </div>
 
+            <!-- Botões Confirmação do cadastro e Voltar ao Login -->
             <div class="p-col-12">
               <button class="p-col-12 btn-primary-color" pButton type="submit" label="CADASTRAR"></button>
             </div>

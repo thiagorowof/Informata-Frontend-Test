@@ -1,6 +1,6 @@
 <div class="container">
 
-
+  <!--Cabeçalho c/ Botão de Logout-->
   <header>
     <div class="menu-nav">
       <img src="/assets/logo-info.png" alt="">
@@ -13,24 +13,23 @@
         </a>
       </div>
     </div>
-
   </header>
-
+  <!---->
 
   <div class="produtos-title">
     <h1>Produtos</h1>
   </div>
 
-
+  <!--LISTA DE PRODUTOS / Filtro de pesquisa pelo nome-->
   <p-orderList [value]="produtos" filterBy="nomeComercial">
 
     <ng-template let-prod pTemplate="item">
       <div>
-        <div>{{prod.codigoErp}} - {{prod.nomeComercial}} - {{prod.apresentacao}} - {{prod.nomeComercialApresentacao}} -
+        <div> {{prod.nomeComercial}} - {{prod.codigoErp}} - {{prod.apresentacao}} - {{prod.nomeComercialApresentacao}} -
           {{prod.unidadeMedidaAnvisa}} - {{prod.codigoBarrasPrincipal}}</div>
       </div>
     </ng-template>
   </p-orderList>
-
+  <!---->
 
 </div>
