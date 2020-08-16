@@ -21,11 +21,13 @@
     <h1>Produtos</h1>
   </div>
 
-  <p-orderList [value]="cars" filterBy="brand">
 
-    <ng-template let-car pTemplate="item">
+  <p-orderList [value]="produtos" filterBy="nomeComercial">
+
+    <ng-template let-prod pTemplate="item">
       <div>
-        <div>{{car.brand}} - {{car.year}} - {{car.color}}</div>
+        <div>{{prod.codigoErp}} - {{prod.nomeComercial}} - {{prod.apresentacao}} - {{prod.nomeComercialApresentacao}} -
+          {{prod.unidadeMedidaAnvisa}} - {{prod.codigoBarrasPrincipal}}</div>
       </div>
     </ng-template>
   </p-orderList>

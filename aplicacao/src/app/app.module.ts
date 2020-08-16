@@ -15,6 +15,7 @@ import { ButtonModule } from 'primeng/button';
 import { PasswordModule } from 'primeng/password';
 import { OrderListModule } from 'primeng/orderlist';
 import { UsersService } from '../app/services/users/users.service';
+import { HttpClientModule } from '@angular/common/http'
 
 
 
@@ -35,7 +36,8 @@ import { UsersService } from '../app/services/users/users.service';
     ButtonModule,
     PasswordModule,
     OrderListModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [UsersService],
   bootstrap: [AppComponent]
