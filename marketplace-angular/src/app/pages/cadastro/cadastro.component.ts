@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SelectItem } from 'primeng/api';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 import { MessageService } from 'primeng/api';
 
 @Component({
@@ -71,8 +71,8 @@ export class CadastroComponent implements OnInit {
 
   cadastrarUsuario() {
     const novoUsuario = this.cadastroForm.value;
-    if (!this.verificarCadastro(novoUsuario.email)) {
-      localStorage.setItem(novoUsuario.email, JSON.stringify(novoUsuario));
+    if (!this.verificarCadastro()) {
+      localStorage.setItem('usuario', JSON.stringify(novoUsuario));
 
       this.mensagemService.add({
         severity: 'success',
@@ -92,9 +92,7 @@ export class CadastroComponent implements OnInit {
     }
   }
 
-
-
-  verificarCadastro(email) {
-    return localStorage.getItem(email) != undefined;
+  verificarCadastro() {
+    return localStorage.getItem('usuario') != undefined;
   }
 }

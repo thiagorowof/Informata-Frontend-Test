@@ -4,6 +4,7 @@ import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
 import { ProdutoService } from 'src/app/services/produto/produto.service';
 import {MenuItem} from 'primeng/api';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-produtos',
@@ -15,7 +16,7 @@ export class ProdutosComponent implements OnInit {
   listaProdutos: Produto[];
   pesquisa: string = '';
 
-  constructor(private produtoService: ProdutoService) {
+  constructor(private produtoService: ProdutoService, private rota: Router) {
   }
 
   ngOnInit(): void {
@@ -32,5 +33,10 @@ export class ProdutosComponent implements OnInit {
     else {
       this.listaProdutos = this.produtos.slice();
     }
+  }
+
+  sair() {
+    localStorage.removeItem('usuario');
+    this.rota.navigate(['/'], { replaceUrl: true });
   }
 }
