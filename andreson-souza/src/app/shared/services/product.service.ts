@@ -11,7 +11,7 @@ export class ProductService {
 
   constructor(private httpClient: HttpClient) { }
 
-  getProducts() {
+  getProducts(): any {
     return this.httpClient.get<any>(this.url)
     .toPromise()
     .then(res => res.data as Product[])

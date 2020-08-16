@@ -22,7 +22,7 @@ export class ProductsComponent implements OnInit {
     this.listProducts();
   }
 
-  listProducts() {
+  listProducts(): any {
     this.productService.getProducts().then(products => this.products = products);
 
     this.cols = [
