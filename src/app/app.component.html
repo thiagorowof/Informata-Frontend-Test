@@ -1,0 +1,22 @@
+<p-menubar>
+   <div class="p-d-inline">
+       <ul>
+           <li *ngIf="!loggedin()">
+               <a class="" routerLink="/register" routerLinkActive>
+                   Register
+               </a>
+           </li>
+           <li *ngIf="!loggedin()">
+            <a class="" routerLink="" routerLinkActive>
+                Login
+            </a>
+        </li> 
+        <li *ngIf="loggedin()">
+            <a class="" routerLink="" routerLinkActive="" (click)="onLogout()">
+                Logout
+            </a>
+        </li> 
+       </ul>
+   </div> 
+</p-menubar>
+<router-outlet></router-outlet>

@@ -1,0 +1,19 @@
+
+  <p-card header="Login"  [style]="{width: '260px'}" styleClass="p-card-shadow">
+
+      <form #loginForm='ngForm' (ngSubmit)="onLogin(loginForm)">
+
+        <span class="p-float-label">
+          <input class= "p-mb-2 p-d-block" placeholder="UserName" required ngModel name="userName" pInputText /> 
+      </span>
+
+        <span class="p-float-label">
+          <input class= "p-mb-2 p-d-block" placeholder="password" required ngModel name="password" pInputText/> 
+      </span>
+      <div>
+        <p-button [disabled]="!loginForm.valid"  type="submit" label="Login" ></p-button>
+      </div>
+      </form>
+
+  </p-card>
+

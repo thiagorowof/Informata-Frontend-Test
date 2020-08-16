@@ -1,67 +1,27 @@
-# :fire: Informata-Frontend-Test
+# MyApp
 
-Hi pessoas!
-Cs tão bem?
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.6.
 
-Esse vai ser o nosso teste técnico para a vaga referente a desenvolvedor front-end na informata.
+## Development server
 
-## Projeto Front-end
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-Nesse projeto, você deverá criar um sistema utilizando angular 4+ (a versão mais atual de preferência, como o angular 9 ou 10)
-Deverá utilizar de preferência o npm ou yarn como gerenciador de pacotes.
-Você deverá utilizar o PrimeNG como biblioteca de estilos e componentes.
+## Code scaffolding
 
-As features a serem construidas são:
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-- Tela de cadastro ( Uma tela fake, não precisa de integração com API, salvar os dados no local storage )
-- Tela de login ( Verificar se esses dados existem para validar a seção );
-- Função de logout (limpar o local storage e voltar para a tela de login);
-- Tela de listagem de produtos (deve haver um campo de pesquisa e deverá ser consumido o endpoint citado abaixo);
+## Build
 
-Após o usuario realizar o login, deve ser exibida uma tela de listagem de produtos. Nessa tela, deve existir:
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-- Campo de pesquisa do produto;
-- Algo para chamar a funcionalidade de logout
+## Running unit tests
 
-A API de produtos é essa:
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-https://us-central1-estudo-974fe.cloudfunctions.net/front_end
+## Running end-to-end tests
 
-### O que iremos avaliar?
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-Você será avaliado pela usabilidade, design e pela arquitetura do app. É esperado que você consiga explicar as decisões que tomou durante o desenvolvimento através dos commits.
+## Further help
 
-Aqui, usamos o padrão de commits `<type>(<scope>): <subject>`, que é amplamente utilizado por:
-
-- https://github.com/angular/angular/blob/master/CONTRIBUTING.md#commit
-- http://karma-runner.github.io/3.0/dev/git-commit-msg.html
-- Entre outros
-
-Em suma, a avaliação se dará por:
-
-- Estruturação (arquitetura) do app;
-- Uso do git;
-- Utilização do primeng e seus componentes;
-- Componetização;
-- JavaScript e typescript (ES6, async/await, http...);
-- Utilização de routing;
-- Utilização do reactive forms;
-- Testes -**extra**-;
-
-
-# Entrega final
-
-Faça um fork desse desse repositório em seu Github e nos envie um Pull Request com o resultado.
-
-Você pode alterar/ajustar/adicionar um `README.md` explicando como executar o projeto e qualquer outro comentário extra que você tenha a fazer tanto sobre o teste, quanto as camadas que foram construidas por você.
-
-Apesar de parecer simples (e talvez seja), não subestime...se parece simples para você, provavelmente parece simples para os outros também, o que leva a um nivelamento legal no fim das contas.
-
-Caso não conclua tudo, enviar mesmo assim o resultado. Sabemos o quão dificil pode ser um teste desses pra quem já está ocupado durante a semana inteira.
-
-Nossa regra numero 1 é qualidade de codigo/manutenção. Se você conseguiu gerar códigos de facil manutenção, mesmo que incompletos, irá agregar e muito para nós.
-
-Qualquer duvida, enviar email para:
-
-- thiago.dantas@informata.com.br
-- thiago@parasolcs.com
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
