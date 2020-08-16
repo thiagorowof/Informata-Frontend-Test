@@ -1,67 +1,32 @@
 # :fire: Informata-Frontend-Test
 
-Hi pessoas!
-Cs tão bem?
-
-Esse vai ser o nosso teste técnico para a vaga referente a desenvolvedor front-end na informata.
-
 ## Projeto Front-end
 
-Nesse projeto, você deverá criar um sistema utilizando angular 4+ (a versão mais atual de preferência, como o angular 9 ou 10)
-Deverá utilizar de preferência o npm ou yarn como gerenciador de pacotes.
-Você deverá utilizar o PrimeNG como biblioteca de estilos e componentes.
+### Instruções para rodar o projeto:
 
-As features a serem construidas são:
+Baixar as dependências
+```bash
+npm install
+```
 
-- Tela de cadastro ( Uma tela fake, não precisa de integração com API, salvar os dados no local storage )
-- Tela de login ( Verificar se esses dados existem para validar a seção );
-- Função de logout (limpar o local storage e voltar para a tela de login);
-- Tela de listagem de produtos (deve haver um campo de pesquisa e deverá ser consumido o endpoint citado abaixo);
+Rodar o projeto com o seguinte comando:
 
-Após o usuario realizar o login, deve ser exibida uma tela de listagem de produtos. Nessa tela, deve existir:
+```bash
+ng serve
+```
 
-- Campo de pesquisa do produto;
-- Algo para chamar a funcionalidade de logout
+Após o live server subir acessar a url:
 
-A API de produtos é essa:
+[http://localhost:4200/](http://localhost:4200/)
 
-https://us-central1-estudo-974fe.cloudfunctions.net/front_end
+### Instruções de login
 
-### O que iremos avaliar?
+Primeiramente é preciso preencher os campos do formulário de cadastro e submeter os dados. A senha precisa ter 6 caracteres ou mais.
 
-Você será avaliado pela usabilidade, design e pela arquitetura do app. É esperado que você consiga explicar as decisões que tomou durante o desenvolvimento através dos commits.
+Após efetuar o cadastro a página será redirecionada para a tela de login.
 
-Aqui, usamos o padrão de commits `<type>(<scope>): <subject>`, que é amplamente utilizado por:
+Ao efetuar o login a página será redirecionada para a listagem de produtos.
 
-- https://github.com/angular/angular/blob/master/CONTRIBUTING.md#commit
-- http://karma-runner.github.io/3.0/dev/git-commit-msg.html
-- Entre outros
+Há um botão de logout no toolbar para sair da aplicação.
 
-Em suma, a avaliação se dará por:
-
-- Estruturação (arquitetura) do app;
-- Uso do git;
-- Utilização do primeng e seus componentes;
-- Componetização;
-- JavaScript e typescript (ES6, async/await, http...);
-- Utilização de routing;
-- Utilização do reactive forms;
-- Testes -**extra**-;
-
-
-# Entrega final
-
-Faça um fork desse desse repositório em seu Github e nos envie um Pull Request com o resultado.
-
-Você pode alterar/ajustar/adicionar um `README.md` explicando como executar o projeto e qualquer outro comentário extra que você tenha a fazer tanto sobre o teste, quanto as camadas que foram construidas por você.
-
-Apesar de parecer simples (e talvez seja), não subestime...se parece simples para você, provavelmente parece simples para os outros também, o que leva a um nivelamento legal no fim das contas.
-
-Caso não conclua tudo, enviar mesmo assim o resultado. Sabemos o quão dificil pode ser um teste desses pra quem já está ocupado durante a semana inteira.
-
-Nossa regra numero 1 é qualidade de codigo/manutenção. Se você conseguiu gerar códigos de facil manutenção, mesmo que incompletos, irá agregar e muito para nós.
-
-Qualquer duvida, enviar email para:
-
-- thiago.dantas@informata.com.br
-- thiago@parasolcs.com
+Para efetuar o login novamente com o mesmo usuário não é preciso efetuar um novo cadastro.
