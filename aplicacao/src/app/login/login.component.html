@@ -24,30 +24,33 @@
 
 
           <!-- Input de usuário -->
-          <div class="p-col-12">
-            <span class="p-float-label">
-              <input class="p-col-12" id="float-input" type="text" pInputText>
-              <label for="float-input">Usuário</label>
-            </span>
-          </div>
+          <form class="p-grid" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <div class="p-col-12">
+              <span class="p-float-label">
+                <input class="p-col-12" id="float-input" formControlName="usuario" type="text" pInputText>
+                <label for="float-input">Usuário</label>
+              </span>
+            </div>
 
-          <!-- Input de senha -->
-          <div class="p-col-12">
-            <span class="p-float-label">
-              <input class="p-col-12" id="float-input" type="password" pPassword>
-              <label for="float-input">Senha</label>
-            </span>
-          </div>
+            <!-- Input de senha -->
+            <div class="p-col-12">
+              <span class="p-float-label">
+                <input class="p-col-12" id="float-input" formControlName="senha" type="password" pPassword>
+                <label for="float-input">Senha</label>
+              </span>
+            </div>
 
-          <!-- Botões Entrar e Cadastrar -->
-          <div class="p-col-12">
-            <button class="p-col-12 btn-primary-color" pButton type="button" label="ENTRAR"></button>
-          </div>
+            <!-- Botões Entrar e Cadastrar -->
+            <div class="p-col-12">
+              <button class="p-col-12 btn-primary-color" pButton type="submit" label="ENTRAR"></button>
+            </div>
 
-          <div class="p-col-12">
-            <a routerLink="/register"> <button class="btn-secondary-color p-button-outlined p-col-12" pButton
-                type="button" label="CADASTRAR"></button> </a>
-          </div>
+            <div class="p-col-12">
+              <a routerLink="/register"> <button class="btn-secondary-color p-button-outlined p-col-12" pButton
+                  type="button" label="CADASTRAR"></button> </a>
+            </div>
+
+          </form>
         </div>
       </p-card>
       <!-- FIM - Formulário de Login -->

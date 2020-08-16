@@ -13,6 +13,7 @@ export class UsersService {
 
   /*Salvando usuário cadastrado no localstorage, caso algum usuário for cadastrado
   novamente, concatentando novos usuários e nao perdendo os antigos */
+
   salvarUsuario(usuario) {
     let usuariosCadastrados = [];
     if (this.carregarUsuarios()) {
@@ -22,9 +23,10 @@ export class UsersService {
     localStorage.setItem(CHAVE_USUARIO, JSON.stringify(usuariosCadastrados));
   }
 
-  /*Carregando usuários no localStorage*/
-  carregarUsuarios() {
-    return JSON.parse(localStorage.getItem(CHAVE_USUARIO));
+  /*Carregando usuários do localStorage*/
+  carregarUsuarios(): any[] {
+    let usuarios = JSON.parse(localStorage.getItem(CHAVE_USUARIO));
+    return usuarios;
   }
 
 }
