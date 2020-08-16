@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
 import { UsersService } from '../services/users/users.service';
 
 
@@ -11,7 +12,11 @@ import { UsersService } from '../services/users/users.service';
 export class RegisterComponent implements OnInit {
 
   registerForm: FormGroup;
-  constructor(private userService: UsersService) {
+
+  constructor(private userService: UsersService,
+    private route: ActivatedRoute,
+    private router: Router) {
+
 
   }
 
@@ -25,9 +30,11 @@ export class RegisterComponent implements OnInit {
   onSubmit() {
     if (this.registerForm.valid) {
       this.userService.salvarUsuario(this.registerForm.value);
+      alert('Usuário cadastrado com sucesso!');
+      this.router.navigate(['/']);
 
     } else {
-      alert('corrige essa porra filho da puta')
+      alert('Porfavor preencha os dados corretamente.')
     }
 
   }

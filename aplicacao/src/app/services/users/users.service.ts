@@ -4,6 +4,7 @@ const CHAVE_USUARIO = 'usuarios';
 @Injectable({
   providedIn: 'root'
 })
+
 export class UsersService {
 
   constructor() { }
