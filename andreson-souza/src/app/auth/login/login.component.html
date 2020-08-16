@@ -1,4 +1,4 @@
-<div class="panel-container p-shadow-8">
+<div class="panel-container-login p-shadow-8">
   <p-panel>
     <p-header class="panel-title">
       Login
@@ -8,7 +8,7 @@
       <form [formGroup]="form" (ngSubmit)="onSubmit()">
 
         <div class="p-field">
-          <label for="username">Username</label>
+          <label for="username">Usuário</label>
           <span class="p-input-icon-right">
             <i class="pi pi-user"></i>
             <input type="username" formControlName="username" pInputText />
@@ -16,7 +16,7 @@
         </div>
 
         <div class="p-field form-group">
-          <label for="password">Password</label>
+          <label for="password">Senha</label>
           <span class="p-input-icon-right">
             <i class="pi pi-lock"></i>
             <input type="password" formControlName="password" pInputText />
@@ -25,7 +25,7 @@
 
         <div class="p-fluid p-formgrid p-grid">
           <div class="p-field p-col-12 p-md-3">
-            <button pButton pRipple label="Logar" class="p-button-raised"></button>
+            <button pButton pRipple label="Entrar" class="p-button-raised"></button>
           </div>
           <p-button label="Cadastrar-se" styleClass="p-button-link" routerLink="../register"></p-button>
         </div>
