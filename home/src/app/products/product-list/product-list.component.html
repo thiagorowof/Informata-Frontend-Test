@@ -1,9 +1,9 @@
 <p-menubar [model]="items">
-  <button pButton label="Logout" class="p-button-danger" icon="pi pi-fw pi-power-off" onclick="localStorage.removeItem('token');window.location.reload();"></button>
+  <button pButton label="Logout" class="p-button-danger" icon="pi pi-fw pi-power-off" onclick="localStorage.clear();window.location.reload();"></button>
 </p-menubar>
 
 <div class="card" style="margin-top: 2em;">
-  <p-table [value]="products" selectionMode="single" dataKey="code">
+  <p-table #dt [value]="products" selectionMode="single" dataKey="code" [globalFilterFields]="['id','codigoErp','apresentacao','nomeComercial','nomeComercialComApresentacao','unidadeMedidaAnvisa','codigoBarrasPrincipal']">
     <ng-template pTemplate="caption">
       <div class="table-header">
           Produtos
