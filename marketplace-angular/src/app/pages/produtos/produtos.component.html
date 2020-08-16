@@ -1,31 +1,46 @@
-<section class="produtos">
+<p-menubar>
+   <button pButton label="Sair" icon="pi pi-power-off"></button>
+</p-menubar>
 
+<section class="produtos">
   <div class="p-grid p-fluid">
     <div class="p-col-12 p-md-4">
       <div class="p-inputgroup">
-        <button type="button" pButton pRipple label="Pesquisar"></button>
-        <input type="text" pInputText placeholder="Palavra-chave" />
+        <input
+          type="text"
+          pInputText
+          placeholder="Palavra-chave"
+          [(ngModel)]="pesquisa"
+          (keydown)="pesquisar()"
+        />
       </div>
+
     </div>
   </div>
 
   <div>
-<p-table [columns]="cols" [value]="products" styleClass="p-datatable-responsive-demo">
-    <ng-template pTemplate="header" let-columns>
+    <p-table
+      [value]="listaProdutos"
+      [paginator]="true"
+      [rows]="10"
+      [showCurrentPageReport]="true"
+      currentPageReportTemplate="Exibindo {first} à {last} de {totalRecords} produtos"
+      [rowsPerPageOptions]="[10, 25, 50]"
+    >
+      <ng-template pTemplate="header">
         <tr>
-            <th *ngFor="let col of columns">
-                {{col.header}}
-            </th>
+          <th>Code</th>
+          <th>Name</th>
+          <!-- <th>Category</th>
+              <th>Quantity</th> -->
         </tr>
-    </ng-template>
-    <ng-template pTemplate="body" let-rowData let-columns="columns">
+      </ng-template>
+      <ng-template pTemplate="body" let-produto>
         <tr>
-            <td *ngFor="let col of columns">
-                <span class="p-column-title">{{col.header}}</span>
-                {{rowData[col.field]}}
-            </td>
+          <td>{{ produto.id }}</td>
+          <td>{{ produto.nomeComercial }}</td>
         </tr>
-    </ng-template>
-</p-table>
-</div>
+      </ng-template>
+    </p-table>
+  </div>
 </section>

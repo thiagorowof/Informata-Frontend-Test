@@ -3,7 +3,13 @@
     <div class="p-col">
       <h3>Login:</h3>
       <span class="p-float-label">
-        <input class="inputArea" id="float-input" type="text" size="30" pInputText />
+        <input
+          class="inputArea"
+          id="float-input"
+          type="text"
+          size="30"
+          pInputText
+        />
         <label for="float-input">Digite seu e-mail</label>
       </span>
     </div>
@@ -16,15 +22,29 @@
     </div>
 
     <div class="p-col">
-      <span>
-        <p-button label="Entrar" icon="pi pi-check" iconPos="right"></p-button>
-      </span>
+      <!-- <p-button label="Entrar" icon="pi pi-check" iconPos="right"></p-button> -->
+      <button
+        pButton
+        pRipple
+        type="button"
+        label="Entrar"
+        style="width: 100%;"
+        class="p-mr-2 p-mb-2"
+        icon="pi pi-check"
+        iconPos="right"
+      ></button>
     </div>
 
     <div class="p-col">
-
-        <p-button label="Quero me cadastrar" class="larguraBtn" ></p-button>
-
+      <!-- <p-button label="Quero me cadastrar" class="larguraBtn" ></p-button> -->
+      <a
+        pButton
+        pRipple
+        [routerLink]="['/cadastro']"
+        label="Quero me cadastrar"
+        style="width: 100%;"
+        class="p-mr-2 p-mb-2"
+      ></a>
     </div>
   </div>
 </section>
