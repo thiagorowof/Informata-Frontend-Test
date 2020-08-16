@@ -1,25 +1,49 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { TestBed, inject, ComponentFixture } from '@angular/core/testing';
 
+import { AuthService } from './auth/auth.service';
 import { LoginComponent } from './login.component';
+import { By } from '@angular/platform-browser';
+import { Usuario } from './usuario';
 
-describe('LoginComponent', () => {
-  let component: LoginComponent;
-  let fixture: ComponentFixture<LoginComponent>;
+let fixture: ComponentFixture<LoginComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ LoginComponent ]
-    })
-    .compileComponents();
-  }));
+
+describe('Validar serviço de autenticação', () => {
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(LoginComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+    TestBed.configureTestingModule({
+      providers: [AuthService]
+    });
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+
+  it('Usuário e senha válidos', inject([AuthService], (service: AuthService) => {    
+    
+    let usuario = {
+      nome: 'admin',
+      senha: 'admin'
+    }
+    
+    expect(usuario.nome).toBeTruthy();
+    expect(usuario.senha).toBeTruthy();
+  }));
+
+  it('Usuário ou senha válido(s)', inject([AuthService], (service: AuthService) => {
+    let usuario = {
+      nome: 'admin',
+      senha: 'admin'
+    }
+    expect(service.fazerLogin(usuario)).toBeFalsy();
+  }));
+
+});
+
+
+describe('Verifica CSS`s', () => {
+  it('Deve ter uma classe login-panel', () => {
+    fixture.detectChanges();
+    let el = fixture.debugElement.query(By.css('.login-panel'));
+
+    expect(el).toBeTruthy();
+  })
 });

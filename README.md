@@ -7,6 +7,11 @@ Start
 
     ng serve
 
+
+Login
+
+    use the login 'admin' with password 'admin'
+
 Release History
 
     0.2.3
