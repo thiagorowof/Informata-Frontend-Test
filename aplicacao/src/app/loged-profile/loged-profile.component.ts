@@ -9,6 +9,11 @@ import { Component, OnInit } from '@angular/core';
 
 export class LogedProfileComponent implements OnInit {
 
+  logout() {
+    localStorage.clear();
+
+  }
+
   cars: any[];
 
   ngOnInit() {

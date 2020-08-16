@@ -7,8 +7,10 @@
       <div class="menu-nav-items">
         <li>+55 (81) 3424-9555 </li>
         <li>contato@informata.com.br</li>
-        <button pButton type="button" class="p-button-raised p-button-rounded">
-          <i class="pi pi-power-off"></i></button>
+        <a routerLink="/">
+          <button (click)="logout()" pButton type="button" class="p-button-raised p-button-rounded">
+            <i class="pi pi-power-off"></i></button>
+        </a>
       </div>
     </div>
 

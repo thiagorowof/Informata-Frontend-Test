@@ -21,27 +21,29 @@
             <h2>CADASTRO</h2>
           </div>
 
-          <div class="p-col-12">
-            <span class="p-float-label">
-              <input class="p-col-12" id="float-input" type="text" pInputText>
-              <label for="float-input">Digite seu usuário</label>
-            </span>
-          </div>
+          <form class="p-grid" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+            <div class="p-col-12">
+              <span class="p-float-label">
+                <input class="p-col-12" id="float-input" type="text" formControlName="usuario" pInputText>
+                <label for="float-input">Digite seu usuário</label>
+              </span>
+            </div>
 
-          <div class="p-col-12">
-            <span class="p-float-label">
-              <input class="p-col-12" id="float-input" type="password" pPassword>
-              <label for="float-input">Digite sua senha</label>
-            </span>
-          </div>
+            <div class="p-col-12">
+              <span class="p-float-label">
+                <input class="p-col-12" id="float-input" type="password" formControlName="senha" pPassword>
+                <label for="float-input">Digite sua senha</label>
+              </span>
+            </div>
 
-          <div class="p-col-12">
-            <button class="p-col-12 btn-primary-color" pButton type="button" label="CADASTRAR"></button>
-          </div>
-          <div class="p-col-12">
-            <a routerLink="/"><button class="btn-secondary-color p-button-outlined p-col-12" pButton type="button"
-                label="VOLTAR"></button></a>
-          </div>
+            <div class="p-col-12">
+              <button class="p-col-12 btn-primary-color" pButton type="submit" label="CADASTRAR"></button>
+            </div>
+            <div class="p-col-12">
+              <a routerLink="/"><button class="btn-secondary-color p-button-outlined p-col-12" pButton type="button"
+                  label="VOLTAR"></button></a>
+            </div>
+          </form>
         </div>
       </p-card>
       <!-- FIM - Formulário Cadastro de Login e Senha -->
