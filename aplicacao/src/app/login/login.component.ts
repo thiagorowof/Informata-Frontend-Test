@@ -24,6 +24,10 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit() {
+
+    /*No submit do formulário ao usuario digitar: usuario e senha, estamos validando 
+    primeiramente se as regras estabelecidas no FormGroup estão válidas se sim, entram para
+    proxíma validação que é a dos valores dos inputs se estão os mesmos valores salvos no LocalStorage*/
     if (this.loginForm.valid) {
       console.log(this.loginForm.value);
       if (this.validarUsuario(this.loginForm.value.usuario, this.loginForm.value.senha)) {
@@ -35,6 +39,7 @@ export class LoginComponent implements OnInit {
     }
   }
 
+  /*Criação do metodo para validar o usuario, passando os usuarios para um array e retornando usuario e senha*/
   private validarUsuario(usuario, senha) {
     var listaUsuarios: any[] = this.userService.carregarUsuarios();
     return listaUsuarios.some(item => item.usuario == usuario && item.senha == senha);
