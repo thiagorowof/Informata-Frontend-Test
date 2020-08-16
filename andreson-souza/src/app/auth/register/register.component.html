@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="panel-container p-shadow-8">
+  <div class="panel-container-register p-shadow-8">
     <p-panel>
       <p-header class="panel-title">
         Registro
@@ -9,23 +9,28 @@
         <form [formGroup]="form" (ngSubmit)="onSubmit()">
 
           <div class="p-field form-group">
-            <label for="firstName">First Name</label>
+            <label for="firstName">Primeiro Nome</label>
             <input type="text" formControlName="firstName" pInputText />
           </div>
 
           <div class="p-field form-group">
-            <label for="lastName">Last Name</label>
+            <label for="lastName">Sobrenome</label>
             <input type="text" formControlName="lastName" pInputText />
           </div>
 
           <div class="p-field form-group">
-            <label for="username">Username</label>
+            <label for="username">Nome de Usuário</label>
             <input type="text" formControlName="username" pInputText />
           </div>
 
           <div class="p-field form-group">
-            <label for="password">Password</label>
+            <label for="password">Senha</label>
             <input type="password" formControlName="password" pInputText />
+          </div>
+
+          <div class="p-field form-group">
+            <label for="password2">Confirmar Senha</label>
+            <input type="password" formControlName="password2" pInputText />
           </div>
 
           <div class="p-fluid p-formgrid p-grid">
