@@ -1,0 +1,32 @@
+<div class= "ui-g">
+<p-panel header="Administrador de produtos" [style]="{width:'110%'}">
+  <form class="search-container">
+    <input type="text" id="search-bar" placeholder="Digite o termo de pesquisa">
+    <a href="#" class="search-icon">
+        <i class="fa fa-search"></i>
+    </a>
+  </form>
+  <p-table [value]= "produtos">
+  <ng-template pTemplate="header">
+    <tr>
+      <th>codigoErp</th>
+      <th>apresentacao</th>
+      <th>nomeComercial</th>
+      <th>nomeComApresentacao</th>
+      <th>unidadeMedidaAnvisa</th>
+      <th>codigoBarrasPrincipal</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-produto>
+    <tr>
+      <td>{{produto.codigoErp}}</td>
+      <td>{{produto.apresentacao}}</td>
+      <td>{{produto.nomeComercial}}</td>
+      <td>{{produto.nomeComercialComApresentacao}}</td>
+      <td>{{produto.unidadeMedidaAnvisa}}</td>
+      <td>{{produto.codigoBarrasPrincipal}}</td>
+    </tr>
+  </ng-template>
+</p-table>
+</p-panel>
+</div>

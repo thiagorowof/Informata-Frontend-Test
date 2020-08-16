@@ -1,0 +1,18 @@
+<header>
+  <div class="container">
+    <a routerLink="/login" class="logo">INFORMATA</a>
+    <nav>
+      <ul>
+        <li><a href="#" routerLink="/register">Register</a></li>
+        <li><a href="#" routerLink="/login" *ngIf="!isLoggedIn()">Login</a></li>
+        <li><a (click)="logout()" *ngIf="isLoggedIn()" [style]="{cursor:'pointer'}">Logout</a></li>
+
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="container">
+
+  <router-outlet></router-outlet>
+</div>

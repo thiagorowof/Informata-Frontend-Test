@@ -1,0 +1,26 @@
+<form id="register-form">
+  <div class="p-shadow-24">
+    <p-card>
+      <div class="p-fluid p-formgrid p-grid">
+        <div class="p-field p-col-12 p-md-6">
+          <label for="userName" required>Nome de usuário</label>
+          <input id="userName" type="text" [(ngModel)]="usuario.userName" name="userName" pInputText required>
+        </div>
+        <div class="p-field p-col-12 p-md-6">
+          <label for="email">Email</label>
+          <input id="email" type="email" [(ngModel)]="usuario.email" name="email" pInputText required>
+        </div>
+        <div class="p-field p-col-12 p-md-6">
+          <label for="password">Password</label>
+          <input pInputText id="password" type="password" [(ngModel)]="usuario.password" name="password" pPassword
+            required>
+        </div>
+
+        <div class="p-field p-col-12 p-md-2">
+          <button pButton type="button" label="Submit" class="p-button-raised p-button-rounded" id="register-button"
+            (click)="save()"></button>
+
+        </div>
+      </div>
+    </p-card>
+  </div>

@@ -1,0 +1,27 @@
+<div class="login">
+    <form id="form-login">
+        <div class="p-shadow-24">
+            <p-card >
+                <div class="p-formgroup-inline">
+                    <div class="p-field">
+                        <label for="email" class="p-sr-only">Email</label>
+                        <input id="email" type="email" name="email" [(ngModel)]="loginInfo.email" pInputText
+                            placeholder="Email" required>
+                    </div>
+                    <br>
+                    <div class="p-field">
+                        <label for="password" class="p-sr-only">Senha</label>
+                        <input id="userPassword" type="password" name="password" [(ngModel)]="loginInfo.password"
+                            pInputText placeholder="Senha" required>
+                    </div>
+                    <button pButton id="login-button" type="submit" label="Submit" value="Login"
+                        (click)="login()"></button>
+                        <div>
+                            <small id="username-help">Por favor insira seu email e senha.</small>
+                        </div>
+                    
+                </div>
+            </p-card>
+        </div>
+    </form>
+</div>
