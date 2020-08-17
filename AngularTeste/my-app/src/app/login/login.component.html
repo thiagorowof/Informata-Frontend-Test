@@ -1,0 +1,32 @@
+<div class="p-d-flex p-jc-center p-mt-0">
+    <h2>Farmácia X</h2>
+</div>
+
+<div class="p-d-flex p-jc-center p-p-6 p-mt-6">
+    <div class="p-flex-column p-p-6 p-shadow-10" style="background-color: white;">
+        <div class="p-col">
+            <div class="p-col p-d-flex p-jc-center">
+                <h3>Welcome</h3>
+            </div>
+            <div class="p-inputgroup">
+                <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+                <input class="p-inputtext-lg" type="text" pInputText placeholder="Usuário">
+            </div>
+        </div>
+        <div class="p-col">
+            <div class="p-inputgroup">
+                <span class="p-inputgroup-addon"><i class="pi pi-key"></i></span>
+                <input class="p-inputtext-lg" type="password" pPassword [feedback]="false" placeholder="Senha" />
+            </div>
+        </div>
+        <div class="p-col p-d-flex  p-jc-center">
+            <button pButton type="button" label="Entrar" icon="pi pi-check" class="p-button-mg"
+                onclick="window.location.href = 'http://localhost:4200/produtos'"></button>
+
+            <button pButton type="button" label="Cadastrar" icon="pi pi-check" class="p-button-mg"
+                onclick="window.location.href = 'http://localhost:4200/cadastro'"></button>
+
+
+        </div>
+    </div>
+</div>
