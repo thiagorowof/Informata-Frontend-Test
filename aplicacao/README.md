@@ -4,6 +4,8 @@ Este projeto foi desenvolvido no [Angular CLI](https://github.com/angular/angula
 O projeto visa mostrar telas de login, de cadastro de usuário e outra de perfil logado 
 no sistema, mostrando alguns dados e um botão para sair do sistema. 
 
+Protótipo: https://xd.adobe.com/view/593cf708-a60c-4064-b077-d20e307bfa64-0c6f/?fullscreen&hints=off
+
 
 # Tabela de conteúdos
 =================
