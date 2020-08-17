@@ -36,7 +36,7 @@ export class ProdutosComponent implements OnInit {
   }
 
   sair() {
-    localStorage.removeItem('usuario');
+    localStorage.removeItem('usuarioLogado');
     this.rota.navigate(['/'], { replaceUrl: true });
   }
 }

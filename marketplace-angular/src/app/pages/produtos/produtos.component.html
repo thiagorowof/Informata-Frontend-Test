@@ -1,5 +1,5 @@
 <p-menubar>
-   <button pButton label="Sair" icon="pi pi-power-off" (click)="sair()" ></button>
+  <button pButton label="Sair" icon="pi pi-power-off" (click)="sair()"></button>
 </p-menubar>
 
 <section class="produtos">
@@ -14,7 +14,6 @@
           (keydown)="pesquisar()"
         />
       </div>
-
     </div>
   </div>
 
@@ -26,19 +25,36 @@
       [showCurrentPageReport]="true"
       currentPageReportTemplate="Exibindo {first} à {last} de {totalRecords} produtos"
       [rowsPerPageOptions]="[10, 25, 50]"
+      [responsive]="true"
     >
-      <ng-template pTemplate="header">
+      <ng-template pTemplate="header" let-columns>
         <tr>
-          <th>Code</th>
-          <th>Name</th>
-          <!-- <th>Category</th>
-              <th>Quantity</th> -->
+          <th>Id</th>
+          <th>Código Erp</th>
+          <th>Nome Completo</th>
+          <th>Unid. de Medida</th>
+          <th>Cód. de Barras</th>
         </tr>
       </ng-template>
-      <ng-template pTemplate="body" let-produto>
+      <ng-template pTemplate="body" let-produto let-columns="columns">
         <tr>
-          <td>{{ produto.id }}</td>
-          <td>{{ produto.nomeComercial }}</td>
+          <td><span class="p-column-title">Id</span>{{ produto.id }}</td>
+          <td>
+            <span class="p-column-title">Código Erp</span
+            >{{ produto.codigoErp }}
+          </td>
+          <td>
+            <span class="p-column-title">Nome Completo</span
+            >{{ produto.nomeComercialComApresentacao }}
+          </td>
+          <td>
+            <span class="p-column-title">Unid. de Medida</span
+            >{{ produto.unidadeMedidaAnvisa }}
+          </td>
+          <td>
+            <span class="p-column-title">Cód. de Barras</span
+            >{{ produto.codigoBarrasPrincipal }}
+          </td>
         </tr>
       </ng-template>
     </p-table>

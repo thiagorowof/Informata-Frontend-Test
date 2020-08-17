@@ -71,8 +71,8 @@ export class CadastroComponent implements OnInit {
 
   cadastrarUsuario() {
     const novoUsuario = this.cadastroForm.value;
-    if (!this.verificarCadastro()) {
-      localStorage.setItem('usuario', JSON.stringify(novoUsuario));
+    if (!this.verificarCadastro(novoUsuario.email)) {
+      localStorage.setItem(novoUsuario.email, JSON.stringify(novoUsuario));
 
       this.mensagemService.add({
         severity: 'success',
@@ -92,7 +92,7 @@ export class CadastroComponent implements OnInit {
     }
   }
 
-  verificarCadastro() {
-    return localStorage.getItem('usuario') != undefined;
+  verificarCadastro(email) {
+    return localStorage.getItem(email) != undefined;
   }
 }

@@ -29,8 +29,9 @@ export class LoginComponent implements OnInit {
 
   fazerLogin() {
     const dadosLogin = this.loginForm.value;
-    const login = JSON.parse(localStorage.getItem('usuario'));
-    if (login && login.senha == dadosLogin.senha) {
+    const cadastro = JSON.parse(localStorage.getItem(dadosLogin.email));
+    if ((cadastro && cadastro.senha == dadosLogin.senha) || (dadosLogin.email == 'administrador' && dadosLogin.senha == 'administrador')) {
+      localStorage.setItem('usuarioLogado', dadosLogin.email)
       this.rota.navigate(['/produtos'], { replaceUrl: true });
     }
   }

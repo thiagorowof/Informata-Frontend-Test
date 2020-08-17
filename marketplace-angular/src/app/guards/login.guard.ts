@@ -13,7 +13,7 @@ constructor ( private rota: Router) {
   canActivate(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    if(localStorage.getItem('usuario') == undefined) {
+    if(localStorage.getItem('usuarioLogado') == undefined) {
       this.rota.navigate(['']);
       return false;
     }
