@@ -1,0 +1,58 @@
+<section class="login">
+  <form [formGroup]="loginForm" (ngSubmit)="fazerLogin()">
+    <div class="loginItens">
+      <div class="p-col">
+        <h3>Login:</h3>
+        <span class="p-float-label">
+          <input
+            class="inputArea"
+            id="float-input"
+            type="text"
+            size="30"
+            pInputText
+            formControlName="email"
+          />
+          <label for="float-input">Digite seu e-mail</label>
+        </span>
+      </div>
+
+      <div class="p-col">
+        <h3>Senha:</h3>
+
+        <input
+          class="inputArea"
+          type="password"
+          pPassword
+          formControlName="senha"
+        />
+      </div>
+
+      <div class="p-col">
+        <!-- <p-button label="Entrar" icon="pi pi-check" iconPos="right"></p-button> -->
+        <button
+          pButton
+          pRipple
+          type="submit"
+          label="Entrar"
+          style="width: 100%;"
+          class="p-mr-2 p-mb-2"
+          icon="pi pi-check"
+          iconPos="right"
+          [disabled]="!loginForm.valid"
+        ></button>
+      </div>
+
+      <div class="p-col">
+        <!-- <p-button label="Quero me cadastrar" class="larguraBtn" ></p-button> -->
+        <a
+          pButton
+          pRipple
+          [routerLink]="['/cadastro']"
+          label="Quero me cadastrar"
+          style="width: 100%;"
+          class="p-mr-2 p-mb-2"
+        ></a>
+      </div>
+    </div>
+  </form>
+</section>

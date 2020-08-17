@@ -1,0 +1,61 @@
+<p-toast></p-toast>
+<section class="cadastro">
+  <div class="cadastroItens">
+    <h1 class="p-text-center">Cadastro</h1>
+    <form [formGroup]="cadastroForm" (ngSubmit)="cadastrarUsuario()">
+      <div class="p-fluid p-formgrid p-grid">
+        <div class="p-field p-col-12 p-md-6">
+          <label for="firstname">Nome</label>
+          <input id="firstname" type="text" pInputText formControlName="nome" />
+        </div>
+        <div class="p-field p-col-12 p-md-6">
+          <label for="lastname">Sobrenome</label>
+          <input id="lastname" type="text" pInputText formControlName="sobrenome" />
+        </div>
+        <div class="p-field p-col-12">
+          <label for="address">Endereço</label>
+          <textarea
+            id="address"
+            type="text"
+            rows="2"
+            class="areaEndereco"
+            pInputTextarea formControlName="endereco"
+          ></textarea>
+        </div>
+        <div class="p-field p-col-12 p-md-6">
+          <label for="city">Cidade</label>
+          <input id="city" type="text" pInputText formControlName="cidade"/>
+        </div>
+        <div class="p-field p-col-12 p-md-3">
+          <label for="state">Estado</label>
+          <p-dropdown
+            inputId="state"
+            [options]="states"
+
+            placeholder="Select"
+ formControlName="estado"
+          ></p-dropdown>
+        </div>
+        <div class="p-field p-col-12 p-md-3">
+          <label for="zip">Cep</label>
+          <input id="zip" type="text" pInputText formControlName="cep" />
+        </div>
+
+        <div class="p-field p-col-12 p-md-6">
+          <label for="email">E-mail</label>
+          <input id="email" type="text" pInputText formControlName="email" />
+        </div>
+
+        <div class="p-field p-col-12 p-md-3">
+          <label for="senha">Senha</label>
+          <input id="senha" type="password" pPassword formControlName="senha"/>
+        </div>
+
+        <div class="p-field p-col-12 p-md-3">
+          <label for="Confirmar cadastro">Confirmar cadastro</label>
+          <button pButton pRipple type="submit" label="Cadastrar" [disabled]="!cadastroForm.valid"></button>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
