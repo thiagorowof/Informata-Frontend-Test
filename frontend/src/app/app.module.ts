@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MenubarModule} from 'primeng/menubar';
 import {ToolbarModule} from 'primeng/toolbar';
+import {TableModule} from 'primeng/table';
 
 import { HeaderComponent } from './components/template/header/header.component';
 import { ProductsComponent } from './components/template/products/products.component';
@@ -24,7 +25,8 @@ import { ProductsComponent } from './components/template/products/products.compo
     BrowserAnimationsModule,
     MenubarModule,
     ToolbarModule,
-    HttpClientModule
+    HttpClientModule,
+    TableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
