@@ -1,0 +1,12 @@
+.logo {
+    max-height: 32px;
+}
+
+.logout i {
+    padding-right: 2px;
+    font-weight: bold;
+}
+
+.logout {
+    font-weight: bold;
+}
