@@ -6,9 +6,16 @@
             </a>
         </span>
     </div>
-    <div class="p-toolbar-group-right logout">
+    <div class="p-toolbar-group-right">
         <span>
-            <a>
+            <a *ngIf="isAuthenticated()">
+                olá, {{ currentUser.email }}
+            </a>
+        </span>
+    </div>
+    <div class="p-toolbar-group-right logout" *ngIf="isAuthenticated()">
+        <span>
+            <a [routerLink]="['/login']" (click)="exit()">
                 <i class="pi pi-sign-out"></i>
                 Logout
             </a>

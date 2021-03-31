@@ -1,9 +1,10 @@
 .content-section{
-    padding: 3rem;
+    padding: 6rem;
+    padding-top: 3rem;
 }
 
 .card {
-    padding: 3rem;
+    padding: 2rem;
 }
 
 .pi-search {

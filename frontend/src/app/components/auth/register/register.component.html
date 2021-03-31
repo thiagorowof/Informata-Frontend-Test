@@ -1,0 +1,21 @@
+<div class="p-d-flex container p-p-0 p-p-sm-1 p-p-md-2 p-p-lg-3">
+    <div class="card p-d-flex p-shadow-4 p-d-block p-mx-auto container p-p-0 p-p-sm-1 p-p-md-2 p-p-lg-3">
+        <div class="p-formgroup-inline container p-p-0 p-p-sm-1 p-p-md-2 p-p-lg-3">
+            <form [formGroup]="registerForm" (ngSubmit)="submit()">
+                <div class="p-field ">
+                    <label for="email" class="p-sr-only">E-mail</label>
+                    <input id="email" type="email" class="form-control" 
+                    formControlName="email" pInputText placeholder="Email"> 
+                </div>
+                <div class="p-field">
+                    <label for="password" class="p-sr-only">Password</label>
+                    <input id="password" type="password" pPassword class="form-control" 
+                    formControlName="password" pInputText placeholder="Password"> 
+                </div>
+                <button pButton class="p-d-block p-mx-auto" type="submit" label="REGISTRAR"
+                [disabled]="!registerForm.valid"></button>             
+            </form>
+        </div>
+    </div>
+</div>
+
