@@ -1,3 +1,4 @@
+import { HeaderService } from './header.service';
 import { User } from './../../auth/user.model';
 import { Router } from '@angular/router';
 import { AuthService } from './../../auth/auth.service';
@@ -10,22 +11,23 @@ import { MenuItem } from 'primeng/api';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
-  currentUser: User
-  jsonCurrentUser: any
   
-
-  constructor(private authService: AuthService, private router: Router) {
-    if (this.isAuthenticated()) {
-      this.jsonCurrentUser = localStorage.getItem('currentUser')
-      console.log(this.jsonCurrentUser)
-      if (this.jsonCurrentUser)
-      this.currentUser = JSON.parse(this.jsonCurrentUser)
-    }
-   }
+  constructor(
+    private authService: AuthService, 
+    private router: Router,
+    private headerService: HeaderService
+    ) { }
 
   ngOnInit(): void {
 
+  }
+
+  get title(): string {
+    return this.headerService.headerData.title
+  }
+
+  get icon(): string {
+    return this.headerService.headerData.icon
   }
 
   exit() {

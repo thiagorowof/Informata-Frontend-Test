@@ -1,12 +1,15 @@
 .logo {
     max-height: 32px;
+    margin-top: 5px;
 }
 
-.logout i {
+.header i {
     padding-right: 2px;
     font-weight: bold;
 }
 
-.logout {
+.header a {
+    text-decoration: none;
+    color: #333;
     font-weight: bold;
 }

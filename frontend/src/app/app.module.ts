@@ -14,6 +14,7 @@ import {MenubarModule} from 'primeng/menubar';
 import {ToolbarModule} from 'primeng/toolbar';
 import {TableModule} from 'primeng/table';
 import {ButtonModule} from 'primeng/button';
+import {InputTextModule} from 'primeng/inputtext';
 
 import { HeaderComponent } from './components/template/header/header.component';
 import { ProductsComponent } from './components/template/products/products.component';
@@ -38,7 +39,8 @@ import { JwtInterceptor } from './helpers/jwt.interceptor';
     HttpClientModule,
     TableModule,
     ReactiveFormsModule,
-    ButtonModule
+    ButtonModule,
+    InputTextModule
   ],
   providers: [
     AuthGuard,

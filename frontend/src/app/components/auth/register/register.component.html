@@ -1,21 +1,27 @@
-<div class="p-d-flex container p-p-0 p-p-sm-1 p-p-md-2 p-p-lg-3">
-    <div class="card p-d-flex p-shadow-4 p-d-block p-mx-auto container p-p-0 p-p-sm-1 p-p-md-2 p-p-lg-3">
-        <div class="p-formgroup-inline container p-p-0 p-p-sm-1 p-p-md-2 p-p-lg-3">
+<div class="p-d-flex p-jc-center p-ai-center p-mt-6">
+    <div class="card p-d-flex p-jc-center p-ai-center  p-shadow-2 p-p-6 p-mt-6">
+        <div class="p-d-flex p-jc-center p-ai-center">
             <form [formGroup]="registerForm" (ngSubmit)="submit()">
-                <div class="p-field ">
-                    <label for="email" class="p-sr-only">E-mail</label>
-                    <input id="email" type="email" class="form-control" 
-                    formControlName="email" pInputText placeholder="Email"> 
+                <h1 class="p-text-bold p-mb-5">Cadastre-se</h1>
+                <div class="p-field  p-grid">
+                    <label for="email" class="p-col-fixed p-sr-only" ></label>
+                    <div class="p-col p-inputgroup">
+                        <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+                        <input id="email" type="email" style="width:200px" class="form-control" 
+                        formControlName="email" pInputText placeholder="Email"> 
+                    </div>
                 </div>
-                <div class="p-field">
-                    <label for="password" class="p-sr-only">Password</label>
-                    <input id="password" type="password" pPassword class="form-control" 
-                    formControlName="password" pInputText placeholder="Password"> 
+                <div class="p-field p-grid">
+                    <label for="password" class="p-sr-only p-col-fixed" ></label>
+                    <div class="p-col p-inputgroup">
+                        <span class="p-inputgroup-addon"><i class="pi pi-key"></i></span>
+                        <input id="password" type="password" style="width:200px" pPassword class="form-control" 
+                        formControlName="password" pInputText placeholder="Password"> 
+                    </div>
                 </div>
-                <button pButton class="p-d-block p-mx-auto" type="submit" label="REGISTRAR"
+                <button pButton class="p-d-block p-mx-auto" style="width:350px" type="submit" label="CADASTRAR"
                 [disabled]="!registerForm.valid"></button>             
             </form>
         </div>
     </div>
 </div>
-

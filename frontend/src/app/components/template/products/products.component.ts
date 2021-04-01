@@ -1,3 +1,5 @@
+import { User } from './../../auth/user.model';
+import { HeaderService } from './../header/header.service';
 import { ProductService } from './../../product/product.service';
 import { Component, OnInit } from '@angular/core';
 import { Product } from '../../product/product.model';
@@ -9,11 +11,23 @@ import { Product } from '../../product/product.model';
 })
 export class ProductsComponent implements OnInit {
 
+  jsonCurrentUser: any
+  currentUser: User
   products: Product[]
 
   cols: any[];
 
-  constructor(private productService: ProductService) { }
+  constructor(private productService: ProductService, private headerService: HeaderService) {
+
+    this.jsonCurrentUser = localStorage.getItem('currentUser')
+    if (this.jsonCurrentUser)
+      this.currentUser = JSON.parse(this.jsonCurrentUser)
+
+    headerService.headerData = {
+      title: this.currentUser.email,
+      icon: 'pi-user'
+    }
+  }
 
   ngOnInit(): void {
     this.productService.read().subscribe(products => {
