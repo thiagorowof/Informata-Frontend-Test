@@ -1,0 +1,18 @@
+.content-section{
+    padding: 6rem;
+    padding-top: 3rem;
+}
+
+.card {
+    padding: 2rem;
+}
+
+.pi-search {
+    margin-right: 10px;
+}
+
+.box {
+    padding-left: 30px;
+    font-size: 1rem;
+    height: 30px;
+}
