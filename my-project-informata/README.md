@@ -21,14 +21,20 @@ Features propostas para o desafio:
 ### O que faltou:
 - Criar os outros componetes, os models e services
 - Integrar a API ao front
-- Estilizar as telas
+- Estilizar as páginas
 
 ----
 
 ### Obs:
-O código apresentou um bug ao dar o comando "ng serve", a príncipio não consegui solucioná-lo. Contudo, sugestões são sempre bem-vindas:)
+O código apresentou uns bugs mas já está funcionando. No entanto, ainda está em fase inicial!
 
 ----
+
+### Como ter acesso ao código:
+- Clone o repositório pelo terminal: git clone https://github.com/cleicykerolim/Informata-Frontend-Test.git
+- Instale o npm: npm install
+- Execute o comando no terminal: ng serve
+- Abra o navegador e digite: localhost:4200
 
 ### Tela simples que seria criada
 
