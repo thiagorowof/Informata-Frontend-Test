@@ -26,7 +26,7 @@ Features propostas para o desafio:
 ----
 
 ### Obs:
-O código apresentou um bug ao dar o comando "ng serve", não consegui solucioná-lo.
+O código apresentou um bug ao dar o comando "ng serve", a príncipio não consegui solucioná-lo. Contudo, sugestões são sempre bem-vindas:)
 
 ----
 
