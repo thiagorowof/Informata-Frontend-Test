@@ -35,5 +35,3 @@ O código apresentou um bug ao dar o comando "ng serve", a príncipio não conse
 ![Frame 2](https://user-images.githubusercontent.com/53884397/114800552-4f768f00-9d70-11eb-8d4d-2b5543af123f.jpg)
 ---
 ![Frame 3](https://user-images.githubusercontent.com/53884397/114800556-50a7bc00-9d70-11eb-8c66-fbac27e8c9e3.jpg)
----
-![Frame 1 (1)](https://user-images.githubusercontent.com/53884397/114800568-556c7000-9d70-11eb-921b-15b45a9469b4.jpg)
