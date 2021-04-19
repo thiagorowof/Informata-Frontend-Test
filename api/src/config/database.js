@@ -1,0 +1,3 @@
+/**
+* Arquivo: config/database.js
+**/

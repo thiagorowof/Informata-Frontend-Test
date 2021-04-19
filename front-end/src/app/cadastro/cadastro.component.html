@@ -1,0 +1,90 @@
+<h3 class="formulario" style="padding-left:30px; font-weight: bold;">Fomulário de cadastro</h3>
+
+<div class="card">
+    <div class="card-bady">
+        <form [formGroup]="adicionarCadastroForm" >
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                <label for="inputNome">Nome</label>
+                <input type="nome" class="form-control" formControlName="nomeUsusario" id="inputNome" placeholder="Nome">
+                </div>
+                <div *ngIf="adicionarCadastroForm.controls['nomeUsusario'].invalid 
+                        && (adicionarCadastroForm.controls['nomeUsusario'].dirty
+                        || adicionarCadastroForm.controls['nomeUsusario'].touched)"
+                        class="alert alert-danger">
+                  <div *ngIf="adicionarCadastroForm.controls['nomeUsusario'].errors.required">       
+                     Campo 'Nome' é obrigatório.
+                  </div>  
+                </div>
+                <div class="form-group col-md-4">
+                <label for="inputEmail">Email</label>
+                <input type="email" class="form-control" formControlName="email" id="inputEmail" placeholder="Email">
+                </div>
+                <div *ngIf="adicionarCadastroForm.controls['email'].invalid 
+                        && (adicionarCadastroForm.controls['email'].dirty
+                        || adicionarCadastroForm.controls['email'].touched)"
+                        class="alert alert-danger">
+                  <div *ngIf="adicionarCadastroForm.controls['email'].errors.required">       
+                     Campo 'E-mail' é obrigatório.
+                  </div>  
+                </div>
+                <div class="form-group col-md-2">
+                <label for="inputTelefone">Telefone</label>
+                <input type="number" class="form-control" formControlName="telefone" id="inputTelefone" placeholder="Telefone">
+                </div>
+                <div *ngIf="adicionarCadastroForm.controls['telefone'].invalid 
+                        && (adicionarCadastroForm.controls['telefone'].dirty
+                        || adicionarCadastroForm.controls['telefone'].touched)"
+                        class="alert alert-danger">
+                  <div *ngIf="adicionarCadastroForm.controls['telefone'].errors.required">       
+                     Campo 'Telefone' é obrigatório.
+                  </div>  
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                <label for="inputEmpresa">Empresa</label>
+                <input type="text" class="form-control" formControlName="nomeDaEmpresa" id="inputEmpresa" placeholder="Nome da Empresa">
+                </div>
+                <div *ngIf="adicionarCadastroForm.controls['nomeDaEmpresa'].invalid 
+                        && (adicionarCadastroForm.controls['nomeDaEmpresa'].dirty
+                        || adicionarCadastroForm.controls['nomeDaEmpresa'].touched)"
+                        class="alert alert-danger">
+                  <div *ngIf="adicionarCadastroForm.controls['nomeDaEmpresa'].errors.required">       
+                     Campo 'Nome da Empresa' é obrigatório.
+                  </div>  
+                </div>
+                <div class="form-group col-md-4">
+                <label for="inputCnpj">CNPJ</label>
+                <input type="number" class="form-control" formControlName="cnpj" id="inputCnpj" placeholder="CNPJ" >
+                </div>
+                <div *ngIf="adicionarCadastroForm.controls['cnpj'].invalid 
+                        && (adicionarCadastroForm.controls['cnpj'].dirty
+                        || adicionarCadastroForm.controls['cnpj'].touched)"
+                        class="alert alert-danger">
+                  <div *ngIf="adicionarCadastroForm.controls['cnpj'].errors.required">       
+                     Campo 'CNPJ' é obrigatório.
+                  </div>  
+                </div>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="inputPassword4">Senha</label>
+                <input type="password" class="form-control" formControlName="senha" id="inputPassword4" placeholder="Password">
+            </div>
+            <div *ngIf="adicionarCadastroForm.controls['senha'].invalid 
+                        && (adicionarCadastroForm.controls['senha'].dirty
+                        || adicionarCadastroForm.controls['senha'].touched)"
+                        class="alert alert-danger">
+                  <div *ngIf="adicionarCadastroForm.controls['senha'].errors.required">       
+                     Campo 'Senha' é obrigatório.
+                  </div>  
+            </div>
+            <div class="form-group col-md-12" >
+                <button type="submit" class="btn btn-primary" 
+                [disabled]="adicionarCadastroForm.pristine || adicionarCadastroForm.invalid" click="enviarDados">
+                    Sign in
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
