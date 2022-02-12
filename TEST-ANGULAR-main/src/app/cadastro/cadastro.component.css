@@ -1,0 +1,43 @@
+
+
+
+p-card{
+  margin-top: 100px;
+  margin-left: 280px;
+  width: 400px;
+  padding: 40px;
+  position: absolute;
+  left: 200px;
+  border: none;
+}
+
+.text-center{
+  text-align: center;
+  color:#6366F1;
+}
+
+.field{
+  margin: 10px;
+}
+
+.field label{
+  margin: 5px 10px;
+}
+
+.field input{
+  margin: 5px;
+}
+
+.field small{
+  margin-left: 6px;
+}
+
+.Submit{
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+
+#linkAviso{
+  text-decoration: none;
+}

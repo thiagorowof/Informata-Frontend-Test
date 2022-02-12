@@ -1,0 +1,49 @@
+
+
+
+<p-menubar>
+    <ng-template pTemplate="start">
+      <h1 class="txtP">Tabela</h1>
+    </ng-template>
+    <ng-template pTemplate="end">
+      <button pButton pRipple type="button" class="Submit" routerLink="/login">Sair</button>
+    </ng-template>
+</p-menubar>
+
+<span class="p-input-icon-left ml-auto">
+  <i class="pi pi-search"></i>
+<input pInputText type="text" class="BuscaID" (input)="encontrar.filterGlobal($any($event.target).value, 'contains')" placeholder="Pesquisar produto por ID" />
+</span>
+
+<p-table #encontrar [value]="produtosData"  [globalFilterFields]="['id']">
+
+  <ng-template pTemplate="header" responsiveLayout="scroll">
+
+
+
+      <tr>
+        <th field="id">ID</th>
+        <th field="codigo.erp">Codigo ERP</th>
+        <th field="apresentacao">Apresentacao</th>
+        <th field="nome.comercial">Nome Comercial</th>
+        <th field="nome.comercial.apresentacao">Nome comercial com apresentacao</th>
+        <th field="medidas">Unidade de medida ANVISA</th>
+        <th field="codigo.barras">Codigo de barras principal</th>
+      </tr>
+  </ng-template>
+
+  <ng-template pTemplate="body" let-row>
+      <tr>
+        <td>{{row.id}}</td>
+        <td>{{row.codigoErp}}</td>
+        <td>{{row.apresentacao}}</td>
+        <td>{{row.nomeComercial}}</td>
+        <td>{{row.nomeComercialComApresentacao}}</td>
+        <td>{{row.unidadeMedidaAnvisa}}</td>
+        <td>{{row.codigoBarrasPrincipal}}</td>
+      </tr>
+  </ng-template>
+
+</p-table>
+
+

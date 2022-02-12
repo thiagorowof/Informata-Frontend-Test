@@ -1,0 +1,34 @@
+
+
+
+
+  <p-card>
+
+      <div>
+        <h2 class="text-center">Login</h2>
+      </div>
+
+      <form [formGroup]="loginForm" (ngSubmit)="login()" >
+
+        <div class="field">
+          <label for="email1" class="block">E-mail</label>
+          <input formControlName="Email" id="e-mail" type="email" aria-describedby="e-mail" placeholder="Insira seu e-mail" pInputText/>
+          <small id="e-mail" class="block">Entre com seu e-mail para realizar login.</small>
+        </div>
+
+        <div class="field">
+          <label for="password1" class="block">Senha</label>
+          <input formControlName="Senha" id="Senha" type="password" aria-describedby="Senha" placeholder="Insira sua senha" pInputText/>
+        </div>
+
+        <p-button type="submit" class="Submit">Entrar</p-button>
+
+        <a routerLink="/cadastro" id="linkAviso">Não possui uma conta? Cadastre-se.</a>
+
+    </form>
+
+  </p-card>
+
+
+
+
