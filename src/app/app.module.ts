@@ -3,18 +3,20 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { ClientesModule } from './clientes/clientes.module';
+import { LoginModule } from './login/login.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
-    AppComponent,         
+    AppComponent           
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    ClientesModule
+    ClientesModule,
+    LoginModule
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA

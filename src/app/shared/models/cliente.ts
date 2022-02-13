@@ -1,8 +1,8 @@
 export class Cliente {
-    public nome!: String;
-    public cpf!: String;
-    public endereco!: String;
-    public cidade!: String;
-    public cep!: String;
-    public estado!: String;
+    public nome!: string;
+    public cpf!: string;
+    public endereco!: string;
+    public cidade!: string;
+    public cep!: string;
+    public estado!: string;
 }

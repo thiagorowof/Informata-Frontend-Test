@@ -1,0 +1,15 @@
+<div class="card">
+    <h2>Login</h2>
+    <p-messages></p-messages>
+    <form #form="ngForm" (ngSubmit)="validar(form)">        
+        <div class="formgrid grid">            
+            <div class="field col-12 md:col-6">
+                <label for="cpf">CPF * </label>
+                <input required id="cpf" name="cpf"  [(ngModel)]="data.cpf" type="text" class="inputfield w-full" pInputText>
+            </div>            
+            <div class="col-12 md:col-12">
+                <p-button type="submit" label="Login"></p-button>
+            </div>   
+        </div>
+    </form>
+</div>
