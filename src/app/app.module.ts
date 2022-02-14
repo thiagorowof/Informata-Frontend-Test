@@ -1,6 +1,7 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {PanelMenuModule} from 'primeng/panelmenu';
 
 import { ClientesModule } from './clientes/clientes.module';
 import { LoginModule } from './login/login.module';
@@ -16,7 +17,9 @@ import { AppRoutingModule } from './app-routing.module';
     AppRoutingModule,
     BrowserAnimationsModule,
     ClientesModule,
-    LoginModule
+    LoginModule,
+    PanelMenuModule
+    
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
