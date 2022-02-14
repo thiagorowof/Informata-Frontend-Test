@@ -1,0 +1,34 @@
+<body>
+<div class="container">
+    <div class="card">
+        <h1>Welcome</h1>
+   
+        <form [formGroup]="Formgroup">
+            <span class="p-float-label">
+                <input id="float-input" type="text" pInputText formControlName="username"> 
+                <label for="float-input">Username</label>
+            </span>
+
+            <span class="p-float-label">
+                <input id="float-input" type="password" pInputText formControlName="password"> 
+                <label for="float-input">Password</label>
+            </span>
+        </form>
+
+        <div class="center">
+            <button pButton type=" button" label="Login" (click)="login()"></button>
+        </div>
+
+        <div class="center">
+            <hr>
+        </div>
+
+        <p> Não tem uma conta?
+            <a href="" routerLink="cadastro">Cadastre-se</a>
+        </p> 
+
+    </div>
+
+
+</div>
+</body>
