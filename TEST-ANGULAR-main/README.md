@@ -9,7 +9,7 @@ Construir um projeto onde exista uma página de login, cadastro, lista de produt
  Angular 13.2.3<br />
  PrimeNg 11.0.0<br />
  PrimeIcons 4.1.0<br />
- Json Server<br />
+ Json Server 0.17.0<br />
  NodeJs 16.14.0<br />
  
 ## Instalação
