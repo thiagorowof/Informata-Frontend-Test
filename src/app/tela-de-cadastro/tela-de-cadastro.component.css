@@ -1,0 +1,51 @@
+.container{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+body{
+    background-image: url(https://i.pinimg.com/originals/92/49/73/924973eae5e26eb3beb7884ff8b94530.jpg);
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.card{
+    background-color: #ffffff80;
+    padding: 40px;
+    border-radius: 4%;
+    box-shadow: 3px 3px 1px 0px #00000070;
+    width: 400px;
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+.p-float-label{
+    display: flex;
+    justify-content: center;
+    padding: 7px;
+    flex-direction: column;
+    
+    }
+
+.center{
+    display: flex;
+    justify-content: center;
+}
+

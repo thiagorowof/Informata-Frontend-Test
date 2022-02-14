@@ -1,0 +1,9 @@
+.p-button {
+    color: #ffffff;
+    background: #4e5e6e;
+    border: 1px solid #000000;
+    padding: 0.75rem 1.25rem;
+    font-size: 1rem;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+    border-radius: 6px;
+}

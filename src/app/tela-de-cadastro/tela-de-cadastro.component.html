@@ -1,0 +1,39 @@
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>Cadastre-se</h1>
+        
+            <form [formGroup]="Formgroup">
+
+            <span class="p-float-label">
+                <input id="float-input" type="text" pInputText formControlName="name" > 
+                <label for="float-input">Name</label>
+            </span>
+    
+            <span class="p-float-label">
+                <input id="float-input" type="text" pInputText formControlName="username"> 
+                <label for="float-input">Username</label>
+            </span>
+    
+            <span class="p-float-label">
+                    <input id="float-password" type="password" pPassword formControlName="password"> 
+                    <label for="float-input">Password</label>
+            </span>
+
+            <span class="p-float-label">
+                <input id="float-password" type="password" pPassword formControlName="rpassword"> 
+                <label for="float-input">Confirm Password</label>
+            </span>
+
+        </form>
+    
+            <div class="center">
+                <button pButton type=" button" label="register" (click)="register()" [disabled]="Formgroup.invalid"></button>
+            </div>
+    
+            <div class="center">
+                <hr>
+            </div>    
+        </div>
+    </div>
+</body>
