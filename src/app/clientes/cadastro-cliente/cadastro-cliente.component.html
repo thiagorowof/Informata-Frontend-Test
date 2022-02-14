@@ -1,0 +1,64 @@
+
+<div class="card">
+    <h2>Cadastro de Cliente</h2>
+    <p-messages></p-messages>
+    <form #form="ngForm" (ngSubmit)="salvar(form)">        
+        <div class="formgrid grid">
+            <div class="field col-12 md:col-6">
+                <label for="nome">Nome * </label>
+                <input required id="nome" name="nome" [(ngModel)]="data.nome" type="text" class="inputfield w-full" pInputText>
+            </div>
+            <div class="field col-12 md:col-6">
+                <label for="cpf">CPF * </label>
+                <input required id="cpf" name="cpf" [(ngModel)]="data.cpf" type="text" class="inputfield w-full" pInputText>
+            </div>
+            <div class="field col-12">
+                <label for="endereco">Endereço</label>
+                <textarea id="endereco" name="endereco" [(ngModel)]="data.endereco" type="text" rows="4" class="inputfield w-full" pInputTextarea></textarea>
+            </div>
+            <div class="field col-12 md:col-6">
+                <label for="cidade">Cidade * </label>
+                <input input required id="cidade" name="cidade" [(ngModel)]="data.cidade" class="inputfield w-full" pInputText>
+            </div>
+            <div class="field col-12 md:col-3">
+                <label for="estado">Estado * </label>
+                <select required id="estado" name="estado" [(ngModel)]="data.estado" class="w-full inputfield" style="appearance: auto" pInputText>
+                    <option>AC</option>
+                    <option>AL</option>
+                    <option>AP</option>
+                    <option>AM</option>
+                    <option>BA</option>
+                    <option>CE</option>
+                    <option>ES</option>
+                    <option>GO</option>
+                    <option>MA</option>
+                    <option>MT</option>
+                    <option>MS</option>
+                    <option>MG</option>
+                    <option>PA</option>
+                    <option>PB</option>
+                    <option>PR</option>
+                    <option>PE</option>
+                    <option>PI</option>
+                    <option>RJ</option>
+                    <option>RN</option>
+                    <option>RS</option>
+                    <option>RO</option>
+                    <option>RR</option>
+                    <option>SC</option>
+                    <option>SP</option>
+                    <option>SE</option>
+                    <option>TO</option>
+                    <option>DF</option>
+                </select>
+            </div>
+            <div class="field col-12 md:col-3">
+                <label for="CEP">CEP * </label>
+                <input required id="cep" name="cep" [(ngModel)]="data.cep" type="text" class="inputfield w-full" pInputText>
+            </div>
+            <div class="col-12 md:col-12">
+                <p-button type="submit" label="Cadastrar Cliente"></p-button>
+            </div>   
+        </div>
+    </form>
+</div>
