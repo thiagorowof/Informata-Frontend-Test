@@ -1,0 +1,39 @@
+
+
+
+
+<div class="container">
+  <p-card>
+
+      <div>
+        <h2 class="text-center">Cadastre-se</h2>
+      </div>
+
+      <form [formGroup]="cadastroForm" (ngSubmit)="cadastrar()" >
+
+        <div class="field">
+          <label for="text1" class="block">Nome</label>
+          <input formControlName="Nome" id="Nome" type="text" aria-describedby="Nome" placeholder="Insira seu nome" pInputText/>
+        </div>
+
+        <div class="field">
+          <label for="email1" class="block">E-mail</label>
+          <input formControlName="Email" id="e-mail" type="email" aria-describedby="e-mail" placeholder="Insira seu e-mail" pInputText/>
+
+        </div>
+
+        <div class="field">
+          <label for="password1" class="block">Senha</label>
+          <input formControlName="Senha" id="Senha" type="password" aria-describedby="Senha" placeholder="Insira sua senha" pInputText/>
+          <small id="e-mail" class="block">Nunca compartilhe seus dados.</small>
+        </div>
+
+        <p-button type="submit" class="Submit">Cadastrar</p-button>
+
+        <a routerLink="/login" id="linkAviso">Já possui uma conta? Faça o Login.</a>
+
+    </form>
+
+  </p-card>
+
+</div>
