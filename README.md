@@ -7,7 +7,7 @@ Esse vai ser o nosso teste técnico para a vaga referente a desenvolvedor front-
 
 ## Projeto Front-end
 
-Nesse projeto, você deverá criar um sistema utilizando angular 4+ (a versão mais atual de preferência, como o angular 9 ou 10)
+Nesse projeto, você deverá criar um sistema utilizando angular 4+ (a versão mais atual de preferência, como o angular 20)
 Deverá utilizar de preferência o npm ou yarn como gerenciador de pacotes.
 Você deverá utilizar o PrimeNG como biblioteca de estilos e componentes.
 
@@ -16,16 +16,16 @@ As features a serem construidas são:
 - Tela de cadastro ( Uma tela fake, não precisa de integração com API, salvar os dados no local storage )
 - Tela de login ( Verificar se esses dados existem para validar a seção );
 - Função de logout (limpar o local storage e voltar para a tela de login);
-- Tela de listagem de produtos (deve haver um campo de pesquisa e deverá ser consumido o endpoint citado abaixo);
+- Tela de listagem de itens (deve haver um campo de pesquisa e deverá ser consumido o endpoint citado abaixo);
 
-Após o usuario realizar o login, deve ser exibida uma tela de listagem de produtos. Nessa tela, deve existir:
+Após o usuario realizar o login, deve ser exibida uma tela de listagem de itens. Nessa tela, deve existir:
 
-- Campo de pesquisa do produto;
+- Campo de pesquisa do itens;
 - Algo para chamar a funcionalidade de logout
 
-A API de produtos é essa:
+A API de itens é essa 🎮:
 
-https://us-central1-estudo-974fe.cloudfunctions.net/front_end
+https://docs.zelda.fanapis.com/
 
 ### O que iremos avaliar?
 
@@ -46,8 +46,8 @@ Em suma, a avaliação se dará por:
 - JavaScript e typescript (ES6, async/await, http...);
 - Utilização de routing;
 - Utilização do reactive forms;
-- Testes -**extra**-;
-
+- Testes (e2e/cypress)-**extra**-;
+- Algo mais que você achar relevante/interessante a ser desenvolvido, pode fazer, e consideraremos como um extra também;
 
 # Entrega final
 
